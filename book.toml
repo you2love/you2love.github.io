@@ -1,0 +1,16 @@
+[book]
+authors = ["资深码农"]
+language = "zh"
+multilingual = false
+src = "src"
+title = "技术博客"
+
+[preprocessor]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output]
+
+[output.html]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
