@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>markdown - 技术博客</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="nginx/index.html"><strong aria-hidden="true">1.</strong> nginx</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="nginx/install.html"><strong aria-hidden="true">1.1.</strong> 源码安装剖析</a></li><li class="chapter-item expanded "><a href="nginx/http.html"><strong aria-hidden="true">1.2.</strong> HTTP模块</a></li><li class="chapter-item expanded "><a href="nginx/use.html"><strong aria-hidden="true">1.3.</strong> 常用技巧</a></li><li class="chapter-item expanded "><a href="nginx/rtmp.html"><strong aria-hidden="true">1.4.</strong> rtmp</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据库</li><li class="chapter-item expanded "><a href="memcached.html"><strong aria-hidden="true">2.</strong> memcached</a></li><li class="chapter-item expanded "><a href="redis.html"><strong aria-hidden="true">3.</strong> redis</a></li><li class="chapter-item expanded "><a href="mysql.html"><strong aria-hidden="true">4.</strong> mysql</a></li><li class="chapter-item expanded affix "><li class="part-title">编程语言</li><li class="chapter-item expanded "><a href="markdown.html" class="active"><strong aria-hidden="true">5.</strong> markdown</a></li><li class="chapter-item expanded "><a href="golang.html"><strong aria-hidden="true">6.</strong> golang</a></li><li class="chapter-item expanded "><a href="python.html"><strong aria-hidden="true">7.</strong> python</a></li><li class="chapter-item expanded "><a href="rust.html"><strong aria-hidden="true">8.</strong> rust</a></li><li class="chapter-item expanded affix "><li class="part-title">软件工具</li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">9.</strong> git</a></li><li class="chapter-item expanded "><a href="docker.html"><strong aria-hidden="true">10.</strong> docker</a></li><li class="chapter-item expanded "><a href="grpc.html"><strong aria-hidden="true">11.</strong> grpc</a></li><li class="chapter-item expanded "><a href="brew.html"><strong aria-hidden="true">12.</strong> brew-酿制</a></li><li class="chapter-item expanded "><a href="gogs.html"><strong aria-hidden="true">13.</strong> gogs-代码托管</a></li><li class="chapter-item expanded "><a href="mermaid.html"><strong aria-hidden="true">14.</strong> mermaid-美人鱼</a></li><li class="chapter-item expanded "><a href="windows.html"><strong aria-hidden="true">15.</strong> windows</a></li><li class="chapter-item expanded "><a href="elastic.html"><strong aria-hidden="true">16.</strong> elastic</a></li><li class="chapter-item expanded "><a href="vim.html"><strong aria-hidden="true">17.</strong> vim</a></li><li class="chapter-item expanded "><a href="makefile.html"><strong aria-hidden="true">18.</strong> makefile</a></li><li class="chapter-item expanded "><a href="github.html"><strong aria-hidden="true">19.</strong> github</a></li><li class="chapter-item expanded "><a href="firefox.html"><strong aria-hidden="true">20.</strong> firefox</a></li><li class="chapter-item expanded "><a href="flutter.html"><strong aria-hidden="true">21.</strong> flutter</a></li><li class="chapter-item expanded "><a href="svn.html"><strong aria-hidden="true">22.</strong> svn</a></li><li class="chapter-item expanded "><a href="tesseract.html"><strong aria-hidden="true">23.</strong> tesseract</a></li><li class="chapter-item expanded "><a href="harbor.html"><strong aria-hidden="true">24.</strong> harbor</a></li><li class="chapter-item expanded "><a href="web.html"><strong aria-hidden="true">25.</strong> web</a></li><li class="chapter-item expanded "><a href="opensource.html"><strong aria-hidden="true">26.</strong> 优秀开源软件</a></li><li class="chapter-item expanded "><a href="unity.html"><strong aria-hidden="true">27.</strong> unity</a></li><li class="chapter-item expanded "><a href="et.html"><strong aria-hidden="true">28.</strong> ET框架</a></li><li class="chapter-item expanded "><a href="gitlab.html"><strong aria-hidden="true">29.</strong> gitlab</a></li><li class="chapter-item expanded "><a href="geocode.html"><strong aria-hidden="true">30.</strong> 地理编码</a></li><li class="chapter-item expanded "><a href="shell.html"><strong aria-hidden="true">31.</strong> shell</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">32.</strong> ai</a></li><li class="chapter-item expanded "><a href="hugo.html"><strong aria-hidden="true">33.</strong> hugo</a></li><li class="chapter-item expanded "><a href="wireshark.html"><strong aria-hidden="true">34.</strong> wireshark</a></li><li class="chapter-item expanded affix "><li class="part-title">杂记</li><li class="chapter-item expanded "><a href="important.html"><strong aria-hidden="true">35.</strong> 重要</a></li><li class="chapter-item expanded "><a href="mac.html"><strong aria-hidden="true">36.</strong> mac</a></li><li class="chapter-item expanded "><a href="rpc.html"><strong aria-hidden="true">37.</strong> rpc</a></li><li class="chapter-item expanded "><a href="search.html"><strong aria-hidden="true">38.</strong> 搜索技巧</a></li><li class="chapter-item expanded "><a href="other.html"><strong aria-hidden="true">39.</strong> 杂项</a></li><li class="chapter-item expanded "><a href="machinelearn.html"><strong aria-hidden="true">40.</strong> 机器学习</a></li><li class="chapter-item expanded "><a href="wasm.html"><strong aria-hidden="true">41.</strong> wasm</a></li><li class="chapter-item expanded affix "><li class="part-title">大厂</li><li class="chapter-item expanded "><a href="aliyun.html"><strong aria-hidden="true">42.</strong> 阿里云</a></li><li class="chapter-item expanded "><a href="tencent.html"><strong aria-hidden="true">43.</strong> 腾讯</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">技术博客</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h1 id="markdown"><a class="header" href="#markdown">markdown</a></h1>
+<hr />
+<h3 id="标准化语法"><a class="header" href="#标准化语法"><a href="https://commonmark.org/help/">标准化语法</a></a></h3>
+<p><img src="webp/markdown/commonmark_example.webp" alt="语法标记简介" /></p>
+<h3 id="github的扩展gfm"><a class="header" href="#github的扩展gfm"><a href="https://github.github.com/gfm">github的扩展GFM</a></a></h3>
+<p><img src="webp/markdown/gfm_table.webp" alt="表格扩展" />
+<img src="webp/markdown/gfm_task_list.webp" alt="任务列表" />
+<img src="webp/markdown/gfm_autolinks.webp" alt="自动链接" />
+<img src="webp/markdown/gfm_del.webp" alt="删除" /></p>
+<h3 id="表情符号网站"><a class="header" href="#表情符号网站"><a href="https://emojipedia.org/">表情符号网站</a></a></h3>
+<blockquote>
+<p>语法： &amp;#xCODE; 其中，CODE 可以从 Emoji Unicode Tables中查到。
+例子： 查到了 表情对应的 Unicode 编码为 U+1F34E，则与此表情对应的 CODE 为 1F34E (舍弃前面的 U+)。
+我们只需在 Markdown 文档中输入 🍎</p>
+</blockquote>
+<hr />
+<h3 id="笔记"><a class="header" href="#笔记">笔记</a></h3>
+<ul>
+<li>
+<p><del>+1</del></p>
+</li>
+<li>
+<p>🍎</p>
+</li>
+<li>
+<p>www.baidu.com</p>
+</li>
+<li>
+<p>gitbook写书工具，有各种插件</p>
+</li>
+<li>
+<p>markdown here写邮件</p>
+</li>
+<li>
+<p>pandoc 不同标记语言间格式转换工具</p>
+</li>
+<li>
+<p>markdown有工具直接生成ppt</p>
+</li>
+<li>
+<p>有工具可以把markdown转成微信公众号需要的格式</p>
+</li>
+<li>
+<p>石墨文档，腾讯文档，语雀文档在线多人协作工具</p>
+</li>
+<li>
+<p>gitbook写书工具，有各种插件</p>
+</li>
+<li>
+<p><a href="https://github.com/rust-lang/mdBook">mdBook-rust实现的gitbook</a></p>
+</li>
+<li>
+<p>mkdocs,python开发的静态站点生成器</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="mysql.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="golang.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="mysql.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="golang.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="mermaid.min.js"></script>
+        <script type="text/javascript" src="mermaid-init.js"></script>
+
+
+    </body>
+</html>

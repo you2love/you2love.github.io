@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>redis - 技术博客</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="nginx/index.html"><strong aria-hidden="true">1.</strong> nginx</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="nginx/install.html"><strong aria-hidden="true">1.1.</strong> 源码安装剖析</a></li><li class="chapter-item expanded "><a href="nginx/http.html"><strong aria-hidden="true">1.2.</strong> HTTP模块</a></li><li class="chapter-item expanded "><a href="nginx/use.html"><strong aria-hidden="true">1.3.</strong> 常用技巧</a></li><li class="chapter-item expanded "><a href="nginx/rtmp.html"><strong aria-hidden="true">1.4.</strong> rtmp</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据库</li><li class="chapter-item expanded "><a href="memcached.html"><strong aria-hidden="true">2.</strong> memcached</a></li><li class="chapter-item expanded "><a href="redis.html" class="active"><strong aria-hidden="true">3.</strong> redis</a></li><li class="chapter-item expanded "><a href="mysql.html"><strong aria-hidden="true">4.</strong> mysql</a></li><li class="chapter-item expanded affix "><li class="part-title">编程语言</li><li class="chapter-item expanded "><a href="markdown.html"><strong aria-hidden="true">5.</strong> markdown</a></li><li class="chapter-item expanded "><a href="golang.html"><strong aria-hidden="true">6.</strong> golang</a></li><li class="chapter-item expanded "><a href="python.html"><strong aria-hidden="true">7.</strong> python</a></li><li class="chapter-item expanded "><a href="rust.html"><strong aria-hidden="true">8.</strong> rust</a></li><li class="chapter-item expanded affix "><li class="part-title">软件工具</li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">9.</strong> git</a></li><li class="chapter-item expanded "><a href="docker.html"><strong aria-hidden="true">10.</strong> docker</a></li><li class="chapter-item expanded "><a href="grpc.html"><strong aria-hidden="true">11.</strong> grpc</a></li><li class="chapter-item expanded "><a href="brew.html"><strong aria-hidden="true">12.</strong> brew-酿制</a></li><li class="chapter-item expanded "><a href="gogs.html"><strong aria-hidden="true">13.</strong> gogs-代码托管</a></li><li class="chapter-item expanded "><a href="mermaid.html"><strong aria-hidden="true">14.</strong> mermaid-美人鱼</a></li><li class="chapter-item expanded "><a href="windows.html"><strong aria-hidden="true">15.</strong> windows</a></li><li class="chapter-item expanded "><a href="elastic.html"><strong aria-hidden="true">16.</strong> elastic</a></li><li class="chapter-item expanded "><a href="vim.html"><strong aria-hidden="true">17.</strong> vim</a></li><li class="chapter-item expanded "><a href="makefile.html"><strong aria-hidden="true">18.</strong> makefile</a></li><li class="chapter-item expanded "><a href="github.html"><strong aria-hidden="true">19.</strong> github</a></li><li class="chapter-item expanded "><a href="firefox.html"><strong aria-hidden="true">20.</strong> firefox</a></li><li class="chapter-item expanded "><a href="flutter.html"><strong aria-hidden="true">21.</strong> flutter</a></li><li class="chapter-item expanded "><a href="svn.html"><strong aria-hidden="true">22.</strong> svn</a></li><li class="chapter-item expanded "><a href="tesseract.html"><strong aria-hidden="true">23.</strong> tesseract</a></li><li class="chapter-item expanded "><a href="harbor.html"><strong aria-hidden="true">24.</strong> harbor</a></li><li class="chapter-item expanded "><a href="web.html"><strong aria-hidden="true">25.</strong> web</a></li><li class="chapter-item expanded "><a href="opensource.html"><strong aria-hidden="true">26.</strong> 优秀开源软件</a></li><li class="chapter-item expanded "><a href="unity.html"><strong aria-hidden="true">27.</strong> unity</a></li><li class="chapter-item expanded "><a href="et.html"><strong aria-hidden="true">28.</strong> ET框架</a></li><li class="chapter-item expanded "><a href="gitlab.html"><strong aria-hidden="true">29.</strong> gitlab</a></li><li class="chapter-item expanded "><a href="geocode.html"><strong aria-hidden="true">30.</strong> 地理编码</a></li><li class="chapter-item expanded "><a href="shell.html"><strong aria-hidden="true">31.</strong> shell</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">32.</strong> ai</a></li><li class="chapter-item expanded "><a href="hugo.html"><strong aria-hidden="true">33.</strong> hugo</a></li><li class="chapter-item expanded "><a href="wireshark.html"><strong aria-hidden="true">34.</strong> wireshark</a></li><li class="chapter-item expanded affix "><li class="part-title">杂记</li><li class="chapter-item expanded "><a href="important.html"><strong aria-hidden="true">35.</strong> 重要</a></li><li class="chapter-item expanded "><a href="mac.html"><strong aria-hidden="true">36.</strong> mac</a></li><li class="chapter-item expanded "><a href="rpc.html"><strong aria-hidden="true">37.</strong> rpc</a></li><li class="chapter-item expanded "><a href="search.html"><strong aria-hidden="true">38.</strong> 搜索技巧</a></li><li class="chapter-item expanded "><a href="other.html"><strong aria-hidden="true">39.</strong> 杂项</a></li><li class="chapter-item expanded "><a href="machinelearn.html"><strong aria-hidden="true">40.</strong> 机器学习</a></li><li class="chapter-item expanded "><a href="wasm.html"><strong aria-hidden="true">41.</strong> wasm</a></li><li class="chapter-item expanded affix "><li class="part-title">大厂</li><li class="chapter-item expanded "><a href="aliyun.html"><strong aria-hidden="true">42.</strong> 阿里云</a></li><li class="chapter-item expanded "><a href="tencent.html"><strong aria-hidden="true">43.</strong> 腾讯</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">技术博客</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h1 id="redis"><a class="header" href="#redis">redis</a></h1>
+<hr />
+<h3 id="安装运行"><a class="header" href="#安装运行">安装运行</a></h3>
+<hr />
+<pre><code class="language-sh">brew install redis
+brew services start redis
+</code></pre>
+<hr />
+<pre><code class="language-sh">wget https://download.redis.io/redis-stable.tar.gz
+tar -xzvf redis-stable.tar.gz
+cd redis-stable
+make
+
+# If the compile succeeds, you'll find several Redis binaries in the src directory, including:
+# redis-server: the Redis Server itself
+# redis-cli is the command line interface utility to talk with Redis.
+# To install these binaries in /usr/local/bin, run:
+make install
+</code></pre>
+<h3 id="自带客户端"><a class="header" href="#自带客户端">自带客户端</a></h3>
+<hr />
+<pre><code class="language-sh">#Usage: redis-cli [OPTIONS] [cmd [arg [arg ...]]]
+#Examples:
+#  cat /etc/passwd | redis-cli -x set mypasswd
+#  redis-cli get mypasswd
+#  redis-cli -r 100 lpush mylist x
+#  redis-cli -r 100 -i 1 info | grep used_memory_human:
+#  redis-cli --quoted-input set '&quot;null-\x00-separated&quot;' value
+#  redis-cli --eval myscript.lua key1 key2 , arg1 arg2 arg3
+#  redis-cli --scan --pattern '*:12345*'
+#When no command is given, redis-cli starts in interactive mode
+#redis-cli的命令提示非常有帮助,比其他终端好用的多
+redis-cli
+</code></pre>
+<h3 id="redisinsight是redis官方出品的可视化管理工具可用于设计开发优化你的redis应用"><a class="header" href="#redisinsight是redis官方出品的可视化管理工具可用于设计开发优化你的redis应用">RedisInsight是Redis官方出品的可视化管理工具，可用于设计、开发、优化你的Redis应用</a></h3>
+<h3 id="redis4引入自动内存碎片整理"><a class="header" href="#redis4引入自动内存碎片整理">redis4引入自动内存碎片整理</a></h3>
+<hr />
+<pre><code class="language-sh"># 开启自动内存碎片整理(总开关),默认no
+activedefrag yes
+# 当碎片达到 100mb 时，开启内存碎片整理
+active-defrag-ignore-bytes 100mb
+# 当碎片超过 10% 时，开启内存碎片整理
+active-defrag-threshold-lower 10
+# 内存碎片超过 100%，则尽最大努力整理
+active-defrag-threshold-upper 100
+# 内存自动整理占用资源最小百分比
+active-defrag-cycle-min 1
+# 内存自动整理占用资源最大百分比
+active-defrag-cycle-max 25
+</code></pre>
+<blockquote>
+<p><strong>Notice:开启后,可能特定时间影响redis响应速度</strong></p>
+</blockquote>
+<h3 id="redis5带来了stream"><a class="header" href="#redis5带来了stream">redis5带来了Stream</a></h3>
+<hr />
+<blockquote>
+<p>Redis对消息队列（MQ，Message Queue）的完善实现
+<img src="webp/redis/redis_stream.webp" alt="redis_stream" /></p>
+</blockquote>
+<h3 id="redis6增加了多线程"><a class="header" href="#redis6增加了多线程">redis6增加了多线程</a></h3>
+<hr />
+<pre><code class="language-sh"># io-threads 4
+# Setting io-threads to 1 will just use the main thread as usual.
+# io-threads-do-reads no
+# Note that Gopher is not currently supported when 'io-threads-do-reads'
+</code></pre>
+<blockquote>
+<p>Redis实例占用相当大的CPU耗时的时候才建议采用,否则使用多线程没有意义。基本上我们都是<strong>观众</strong>!!!</p>
+</blockquote>
+<h3 id="常用功能"><a class="header" href="#常用功能">常用功能</a></h3>
+<hr />
+<div class="table-wrapper"><table><thead><tr><th>功能</th><th>命令</th><th>备注</th></tr></thead><tbody>
+<tr><td>String</td><td>set,get,setnx,mget,mset,msetnx</td><td>最大512MB,可存任何数据</td></tr>
+<tr><td>List</td><td>lpush,lpop,rpush,rpop,blpop,brpop,llen,lpushx,lrem,lrange</td><td>超过40亿个元素</td></tr>
+<tr><td>Hash</td><td>hget,hset,hdel,hgetall,hkeys,hvals,hlen,hmset,hmget</td><td>超过40亿个元素</td></tr>
+<tr><td>Set</td><td>sadd,spop,srem,scard,smembers,sismember,sdiff,sinter,sunion</td><td>超过40亿个成员</td></tr>
+<tr><td>SortedSet</td><td>zadd,zrem,zcard,zcount,zscore,zrange</td><td>超过40亿个成员</td></tr>
+<tr><td>Pub/Sub</td><td>subscribe,publish,unsubscribe</td><td>消息不会保存,广播型</td></tr>
+<tr><td>Stream</td><td>xadd,xdel,xlen,xread,xgroup,xreadgroup,xinfo,xtrim</td><td>消息会保存,每个消息都是一组键值对,同组竞争,组间广播</td></tr>
+<tr><td>Key</td><td>del,keys,type,object,ttl,persist,randomkey,rename</td><td>针对键操作</td></tr>
+<tr><td>Pipelining</td><td>优点:减少RTT(往返时间),多次网络IO,系统调用的消耗</td><td>缺点:独占链接,占用redis内存缓存命令结果</td></tr>
+<tr><td>Auth</td><td>auth password</td><td>验证密码</td></tr>
+<tr><td>HyperLogLog</td><td>pfadd,pfcount</td><td>基数估计</td></tr>
+</tbody></table>
+</div>
+<p><img src="webp/redis/redis_string.webp" alt="string" />
+<img src="webp/redis/redis_list.webp" alt="list" />
+<img src="webp/redis/redis_hash.webp" alt="hash" />
+<img src="webp/redis/redis_set.webp" alt="set" />
+<img src="webp/redis/redis_sortedSet.webp" alt="sortedSet" />
+<img src="webp/redis/redis_pubsub.webp" alt="pub/sub" />
+<img src="webp/redis/redis_key.webp" alt="key" />
+<img src="webp/redis/redis_hl.webp" alt="hl" /></p>
+<ul>
+<li>xreadgroup和xack配合使用</li>
+</ul>
+<pre><code class="language-c">WHILE true
+    entries = XREADGROUP $GroupName $ConsumerName BLOCK 2000 COUNT 10 STREAMS mystream &gt;
+    if entries == nil
+        puts &quot;Timeout... try again&quot;
+        CONTINUE
+    end
+
+    FOREACH entries AS stream_entries
+        FOREACH stream_entries as message
+            process_message(message.id,message.fields)
+
+            # ACK the message as processed
+            XACK mystream $GroupName message.id
+        END
+    END
+END
+</code></pre>
+<h3 id="常见问题"><a class="header" href="#常见问题">常见问题</a></h3>
+<hr />
+<ol>
+<li>
+<p><strong>缓存雪崩:短时间内大量键超时失效</strong></p>
+</li>
+<li>
+<p><strong>缓存击穿:缓存中没有键值</strong></p>
+<ol>
+<li>确实不存在:用布隆过滤器优化</li>
+<li>键超时:设置永不超时,受最大内存限制</li>
+</ol>
+</li>
+</ol>
+<h3 id="批量删除"><a class="header" href="#批量删除">批量删除</a></h3>
+<hr />
+<pre><code class="language-lua">--批量删除msg开始的键值
+EVAL &quot;return redis.call('del', unpack(redis.call('keys', ARGV[1])))&quot; 0 'msg*'
+</code></pre>
+<h3 id="redis通讯协议-resp"><a class="header" href="#redis通讯协议-resp">redis通讯协议-RESP</a></h3>
+<hr />
+<ul>
+<li>请求协议
+<ol>
+<li>*后面数量表示存在几个$</li>
+<li>$后面数量表示字符串的长度</li>
+<li>每项用\r\n分隔</li>
+</ol>
+</li>
+</ul>
+<pre><code class="language-sh">*3\r\n$3\r\nSET\r\n$5\r\nmykey\r\n$7\r\nmyvalue\r\n
+</code></pre>
+<blockquote>
+<p><strong>pipeline实现就是连接发送命令,不用每个都等</strong></p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="memcached.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="mysql.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="memcached.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="mysql.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="mermaid.min.js"></script>
+        <script type="text/javascript" src="mermaid-init.js"></script>
+
+
+    </body>
+</html>

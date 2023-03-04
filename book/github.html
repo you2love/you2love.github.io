@@ -1,0 +1,403 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>github - 技术博客</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="nginx/index.html"><strong aria-hidden="true">1.</strong> nginx</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="nginx/install.html"><strong aria-hidden="true">1.1.</strong> 源码安装剖析</a></li><li class="chapter-item expanded "><a href="nginx/http.html"><strong aria-hidden="true">1.2.</strong> HTTP模块</a></li><li class="chapter-item expanded "><a href="nginx/use.html"><strong aria-hidden="true">1.3.</strong> 常用技巧</a></li><li class="chapter-item expanded "><a href="nginx/rtmp.html"><strong aria-hidden="true">1.4.</strong> rtmp</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">数据库</li><li class="chapter-item expanded "><a href="memcached.html"><strong aria-hidden="true">2.</strong> memcached</a></li><li class="chapter-item expanded "><a href="redis.html"><strong aria-hidden="true">3.</strong> redis</a></li><li class="chapter-item expanded "><a href="mysql.html"><strong aria-hidden="true">4.</strong> mysql</a></li><li class="chapter-item expanded affix "><li class="part-title">编程语言</li><li class="chapter-item expanded "><a href="markdown.html"><strong aria-hidden="true">5.</strong> markdown</a></li><li class="chapter-item expanded "><a href="golang.html"><strong aria-hidden="true">6.</strong> golang</a></li><li class="chapter-item expanded "><a href="python.html"><strong aria-hidden="true">7.</strong> python</a></li><li class="chapter-item expanded "><a href="rust.html"><strong aria-hidden="true">8.</strong> rust</a></li><li class="chapter-item expanded affix "><li class="part-title">软件工具</li><li class="chapter-item expanded "><a href="git.html"><strong aria-hidden="true">9.</strong> git</a></li><li class="chapter-item expanded "><a href="docker.html"><strong aria-hidden="true">10.</strong> docker</a></li><li class="chapter-item expanded "><a href="grpc.html"><strong aria-hidden="true">11.</strong> grpc</a></li><li class="chapter-item expanded "><a href="brew.html"><strong aria-hidden="true">12.</strong> brew-酿制</a></li><li class="chapter-item expanded "><a href="gogs.html"><strong aria-hidden="true">13.</strong> gogs-代码托管</a></li><li class="chapter-item expanded "><a href="mermaid.html"><strong aria-hidden="true">14.</strong> mermaid-美人鱼</a></li><li class="chapter-item expanded "><a href="windows.html"><strong aria-hidden="true">15.</strong> windows</a></li><li class="chapter-item expanded "><a href="elastic.html"><strong aria-hidden="true">16.</strong> elastic</a></li><li class="chapter-item expanded "><a href="vim.html"><strong aria-hidden="true">17.</strong> vim</a></li><li class="chapter-item expanded "><a href="makefile.html"><strong aria-hidden="true">18.</strong> makefile</a></li><li class="chapter-item expanded "><a href="github.html" class="active"><strong aria-hidden="true">19.</strong> github</a></li><li class="chapter-item expanded "><a href="firefox.html"><strong aria-hidden="true">20.</strong> firefox</a></li><li class="chapter-item expanded "><a href="flutter.html"><strong aria-hidden="true">21.</strong> flutter</a></li><li class="chapter-item expanded "><a href="svn.html"><strong aria-hidden="true">22.</strong> svn</a></li><li class="chapter-item expanded "><a href="tesseract.html"><strong aria-hidden="true">23.</strong> tesseract</a></li><li class="chapter-item expanded "><a href="harbor.html"><strong aria-hidden="true">24.</strong> harbor</a></li><li class="chapter-item expanded "><a href="web.html"><strong aria-hidden="true">25.</strong> web</a></li><li class="chapter-item expanded "><a href="opensource.html"><strong aria-hidden="true">26.</strong> 优秀开源软件</a></li><li class="chapter-item expanded "><a href="unity.html"><strong aria-hidden="true">27.</strong> unity</a></li><li class="chapter-item expanded "><a href="et.html"><strong aria-hidden="true">28.</strong> ET框架</a></li><li class="chapter-item expanded "><a href="gitlab.html"><strong aria-hidden="true">29.</strong> gitlab</a></li><li class="chapter-item expanded "><a href="geocode.html"><strong aria-hidden="true">30.</strong> 地理编码</a></li><li class="chapter-item expanded "><a href="shell.html"><strong aria-hidden="true">31.</strong> shell</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">32.</strong> ai</a></li><li class="chapter-item expanded "><a href="hugo.html"><strong aria-hidden="true">33.</strong> hugo</a></li><li class="chapter-item expanded "><a href="wireshark.html"><strong aria-hidden="true">34.</strong> wireshark</a></li><li class="chapter-item expanded affix "><li class="part-title">杂记</li><li class="chapter-item expanded "><a href="important.html"><strong aria-hidden="true">35.</strong> 重要</a></li><li class="chapter-item expanded "><a href="mac.html"><strong aria-hidden="true">36.</strong> mac</a></li><li class="chapter-item expanded "><a href="rpc.html"><strong aria-hidden="true">37.</strong> rpc</a></li><li class="chapter-item expanded "><a href="search.html"><strong aria-hidden="true">38.</strong> 搜索技巧</a></li><li class="chapter-item expanded "><a href="other.html"><strong aria-hidden="true">39.</strong> 杂项</a></li><li class="chapter-item expanded "><a href="machinelearn.html"><strong aria-hidden="true">40.</strong> 机器学习</a></li><li class="chapter-item expanded "><a href="wasm.html"><strong aria-hidden="true">41.</strong> wasm</a></li><li class="chapter-item expanded affix "><li class="part-title">大厂</li><li class="chapter-item expanded "><a href="aliyun.html"><strong aria-hidden="true">42.</strong> 阿里云</a></li><li class="chapter-item expanded "><a href="tencent.html"><strong aria-hidden="true">43.</strong> 腾讯</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">技术博客</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h1 id="github"><a class="header" href="#github">github</a></h1>
+<hr />
+<h3 id="重要提示"><a class="header" href="#重要提示">重要提示</a></h3>
+<ul>
+<li><a href="https://about.gitlab.com/">替代品-gitlab</a></li>
+<li><a href="https://www.githubs.cn/">中文社区-github</a></li>
+<li><a href="https://ossinsight.io/">ossinsight-</a></li>
+<li><a href="https://docs.github.com/">api文档-github</a></li>
+</ul>
+<h3 id="解决访问超慢"><a class="header" href="#解决访问超慢">解决访问超慢</a></h3>
+<hr />
+<ol>
+<li>
+<p><a href="https://www.ipaddress.com/">ip address.com</a>查域名
+<img src="webp/github/ipaddress.webp" alt="ip address" /></p>
+</li>
+<li>
+<p>修改/etc/hosts</p>
+<pre><code class="language-sh">140.82.113.21 collector.Github.com
+140.82.113.5 api.github.com
+140.82.114.4 github.com
+140.82.113.4 github.com
+185.199.108.154 github.githubassets.com
+185.199.109.154 github.githubassets.com
+185.199.110.154 github.githubassets.com
+185.199.111.154 github.githubassets.com
+185.199.110.153 assets-cdn.github.com
+185.199.111.153 assets-cdn.github.com
+185.199.108.153 assets-cdn.github.com
+199.232.69.194 github.global.ssl.fastly.net
+</code></pre>
+</li>
+<li>
+<p>原因是国内dns解析相应域名都是到新加坡,有时候访问不了</p>
+</li>
+<li>
+<p><a href="https://github.com/dotnetcore/FastGithub">FastGithub</a>github加速神器</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>osx-arm64版本会直接被杀死,改用osx-x86</p>
+<pre><code class="language-sh">   [1]    9226 killed     ./fastgithub
+
+   # 丢掉烦人的输出，并且后台运行
+   ./fastgithub &gt; /dev/null &amp;
+   godoc -http=:6060 &amp;
+</code></pre>
+</li>
+<li>
+<p><a href="https://github.com/dotnetcore/FastGithub/blob/master/MacOSXConfig.md">MacOSx配置</a></p>
+</li>
+<li>
+<p>最新版firefox替换证书, 证书-查看证书-颁发机构-导入cer证书,否则报错</p>
+</li>
+<li>
+<p>设置系统自动代理为<code>http://127.0.0.1:38457</code>，或手动代理http/https为<code>127.0.0.1:38457</code></p>
+</li>
+</ul>
+<h3 id="pages服务"><a class="header" href="#pages服务">pages服务</a></h3>
+<hr />
+<ol>
+<li>
+<p>User/Organization Pages 个人或公司站点</p>
+<ol>
+<li>创建username.github.io仓库</li>
+<li>仓库设置自定义域名,项目下面会自动增加CNAME文件</li>
+<li>域名解析增加相应的CNAME记录</li>
+</ol>
+</li>
+<li>
+<p>Project Pages 项目站点</p>
+<ol>
+<li>gh-pages分支用于构建和发布；</li>
+<li>如果user/org pages使用了独立域名，那么托管在账户下的所有project pages将使用相同的域名进行重定向，除非project pages使用了自己的独立域名；
+如果没有使用独立域名，project pages将通过子路径的形式提供服务<a href="http://username.github.com/projectname">http://username.github.com/projectname</a>；</li>
+</ol>
+</li>
+</ol>
+<h3 id="自定义github主页"><a class="header" href="#自定义github主页">自定义github主页</a></h3>
+<ol>
+<li>
+<p>新建一个同名仓库</p>
+<blockquote>
+<p>官方提示：.... is a special repository. Its README.md will appear on your public profile!</p>
+</blockquote>
+</li>
+<li>
+<p>编辑该仓库的 README.md 文件</p>
+</li>
+</ol>
+<h3 id="官方工具"><a class="header" href="#官方工具">官方工具</a></h3>
+<ul>
+<li><a href="https://desktop.github.com/">GitHub Desktop</a></li>
+<li><a href="https://cli.github.com/">GitHub CLI</a></li>
+</ul>
+<h3 id="名词"><a class="header" href="#名词">名词</a></h3>
+<ul>
+<li>
+<p>Sponsor：打赏</p>
+</li>
+<li>
+<p>Watch：如有更新，通知提醒。</p>
+</li>
+<li>
+<p>Fork：分支一份到你的仓库。</p>
+</li>
+<li>
+<p>Code：默认页面，通常会有一个 README.md 文件，用于介绍该项目。</p>
+</li>
+<li>
+<p>Pull requests：请求代码合并，如果你想为项目贡献代码，可以在这里提交。</p>
+</li>
+<li>
+<p>Actions：工作流。</p>
+<blockquote>
+<p>大家知道，持续集成由很多操作组成，比如抓取代码、运行测试、登录远程服务器，发布到第三方服务等等。GitHub 把这些操作就称为 actions。
+很多操作在不同项目里面是类似的，完全可以共享。GitHub 注意到了这一点，想出了一个很妙的点子，允许开发者把每个操作写成独立的脚本文件，存放到代码仓库，使得其他开发者可以引用。
+如果你需要某个 action，不必自己写复杂的脚本，直接引用他人写好的 action 即可，整个持续集成过程，就变成了一个 actions 的组合。这就是 GitHub Actions 最特别的地方。
+GitHub 会监控到，然后分配一台虚拟机先将你的项目 checkout 过去，然后按照你指定的 step 顺序执行定义好的 action</p>
+</blockquote>
+</li>
+<li>
+<p>Projects：项目管理</p>
+</li>
+<li>
+<p>Security：安全评估</p>
+</li>
+<li>
+<p>Wiki：说明文档</p>
+</li>
+<li>
+<p>Insights：数据统计</p>
+</li>
+<li>
+<p>codespaces 类似web IDE，省去环境配置环节，云端开发</p>
+</li>
+<li>
+<p>高级搜索 例如包括nginx的pdf书 nginx extension:pdf</p>
+</li>
+</ul>
+<h3 id="配套网站-netlify"><a class="header" href="#配套网站-netlify">配套网站-<a href="https://app.netlify.com/">Netlify</a></a></h3>
+<ul>
+<li>用最快的方法构建最快的网站</li>
+</ul>
+<blockquote>
+<p>当使用 Github 将网站项目文件夹里的所有东西上传完毕之后，那么就可以打开 Netlify 给予它访问 Github 仓库的权限。
+当 Netlify 读取完你的网站所属仓库时，会自动识别你所用的静态网页生成器的程序，然后只要点击部署并发布，你的网站就会在 Netlify 被构建并且被发布.</p>
+</blockquote>
+<ul>
+<li>
+<p>能够托管服务，免费 CDN</p>
+</li>
+<li>
+<p>能够绑定自定义域名</p>
+</li>
+<li>
+<p>能够启用免费的TLS证书，启用HTTPS</p>
+</li>
+<li>
+<p>支持自动构建</p>
+</li>
+<li>
+<p>提供 Webhooks 和 API</p>
+</li>
+<li>
+<p><a href="https://hellogithub.com/">开源有趣项目-介绍</a></p>
+</li>
+<li>
+<p><a href="https://www.githubs.cn/">github-中文社区</a></p>
+</li>
+</ul>
+<h3 id="多个帐号多个ssh"><a class="header" href="#多个帐号多个ssh">多个帐号，多个ssh</a></h3>
+<pre><code class="language-bash"># ~/.ssh/config配置
+
+Host github3
+   HostName github.com
+   PreferredAuthentications publickey
+   IdentityFile ~/.ssh/id_rsa
+
+Host github2
+   HostName github.com
+   PreferredAuthentications publickey
+   IdentityFile ~/.ssh/id_ecdsa
+
+# 修改远程地址
+# git@github.com:xxx/yyy -&gt; git@github3:xxx/yyy
+# git@github.com:xxx/yyy -&gt; git@github2:xxx/yyy
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="makefile.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="firefox.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="makefile.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="firefox.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="mermaid.min.js"></script>
+        <script type="text/javascript" src="mermaid-init.js"></script>
+
+
+    </body>
+</html>
