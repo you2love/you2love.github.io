@@ -1,5 +1,8 @@
 # 目录
 
+- [web](web.md)
+- [mac](mac.md)
+
 - [nginx](nginx/index.md)
 
   - [源码安装剖析](nginx/install.md)
@@ -34,6 +37,8 @@
 - [brew-酿制](brew.md)
 - [gogs-代码托管](gogs.md)
 - [mermaid-美人鱼](mermaid.md)
+- [shell](shell.md)
+- [wireshark](wireshark.md)
 - [windows](windows.md)
 - [elastic](elastic.md)
 - [vim](vim.md)
@@ -41,28 +46,24 @@
 - [github](github.md)
 - [firefox](firefox.md)
 - [flutter](flutter.md)
-- [svn](svn.md)
 - [tesseract](tesseract.md)
 - [harbor](harbor.md)
-- [web](web.md)
-- [优秀开源软件](opensource.md)
 - [unity](unity.md)
-- [ET框架](et.md)
 - [gitlab](gitlab.md)
 - [地理编码](geocode.md)
-- [shell](shell.md)
-- [ai](ai.md)
 - [hugo](hugo.md)
-- [wireshark](wireshark.md)
+- [ET框架](et.md)
+- [svn](svn.md)
 
 # 杂记
 
 - [重要](important.md)
-- [mac](mac.md)
 - [rpc](rpc.md)
 - [搜索技巧](search.md)
 - [杂项](other.md)
+- [优秀开源软件](opensource.md)
 - [机器学习](machinelearn.md)
+- [ai](ai.md)
 - [wasm](wasm.md)
 
 # 大厂
