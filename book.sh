@@ -17,6 +17,6 @@ fi
 if [ ${host} == "linux" ]; then
     mdbook build
     cp -r book/* /usr/share/nginx/book/
-    cp -r yisoft.png /usr/share/nginx/book/favicon.ico
-    cp -r yisoft.png /usr/share/nginx/book/favicon.png
+    # cp -r yisoft.png /usr/share/nginx/book/favicon.ico
+    # cp -r yisoft.png /usr/share/nginx/book/favicon.png
 fi
