@@ -21,3 +21,7 @@ https://jenkins.xxx/exit
 # 一般是私钥的-----BEGIN OPENSSH PRIVATE KEY-----没有复制全
 stderr: Load key "/tmp/jenkins-gitclient-ssh7026290831916999837.key": invalid format 
 ```
+
+* 复制到远程主机
+
+  * 安装publish-over-ssh插件
