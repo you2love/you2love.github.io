@@ -16,6 +16,7 @@ fi
 
 if [ ${host} == "linux" ]; then
     mdbook build
+    cp -r baidu_verify_codeva-5WexnefSpS.html book/
     cp -r book/* /usr/share/nginx/book/
     # cp -r yisoft.png /usr/share/nginx/book/favicon.ico
     # cp -r yisoft.png /usr/share/nginx/book/favicon.png
