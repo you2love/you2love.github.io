@@ -346,7 +346,7 @@ docker build -t docker-gs-ping:multistage -f Dockerfile.multistage .
 
 ### [python示例](https://docs.docker.com/language/python/)
 
-```dockerfile
+```docker
 # syntax=docker/dockerfile:1
 
 FROM python:3.8-slim-buster

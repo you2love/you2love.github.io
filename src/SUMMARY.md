@@ -79,6 +79,8 @@
 
   - [woff](python/woff.md)
 
+  - [svg](python/svg.md)
+
 - [c++](c++/c++.md)
 
   - [lz78算法](c++/lz78.md)
@@ -114,6 +116,7 @@
 - [wireshark](wireshark.md)
 - [windows](windows.md)
 - [elastic](elastic.md)
+- [jenkins](jenkins.md)
 - [vim](vim.md)
 - [makefile](makefile.md)
 - [github](github.md)
