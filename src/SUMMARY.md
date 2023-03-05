@@ -13,23 +13,45 @@
 
   - [rtmp](nginx/rtmp.md)
 
-# 数据库
+- [python](python/python.md)
+
+  - [fabric](python/fabric.md)
+
+  - [fastapi](python/fastapi.md)
+
+  - [memcached](python/memcached.md)
+
+  - [numpy](python/numpy.md)
+
+  - [ocr](python/ocr.md)
+
+  - [opencv](python/opencv.md)
+
+  - [js2py](python/js2py.md)
+
+- [c++](c++/c++.md)
+
+- [lz78算法](c++/lz78.md)
+
+- [排列生成](c++/perm.md)
+
+- [随机数生成](c++/random.md)
+
+## 数据库
 
 - [memcached](memcached.md)
 - [redis](redis.md)
 - [mysql](mysql.md)
 
-# 编程语言
+## 编程语言
 
 - [markdown](markdown.md)
 
 - [golang](golang.md)
-  
-- [python](python.md)
-  
+
 - [rust](rust.md)
 
-# 软件工具
+## 软件工具
 
 - [git](git.md)
 - [docker](docker.md)
@@ -55,7 +77,7 @@
 - [ET框架](et.md)
 - [svn](svn.md)
 
-# 杂记
+## 杂记
 
 - [重要](important.md)
 - [rpc](rpc.md)
@@ -66,7 +88,7 @@
 - [ai](ai.md)
 - [wasm](wasm.md)
 
-# 大厂
+## 大厂
 
 - [阿里云](aliyun.md)
 
