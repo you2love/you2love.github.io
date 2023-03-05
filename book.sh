@@ -15,6 +15,8 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
 fi
 
 if [ ${host} == "linux" ]; then
+    git reset --hard
+    git pull
     mdbook build
     cp -r baidu_verify_codeva-5WexnefSpS.html book/
     cp -r BingSiteAuth.xml book/
