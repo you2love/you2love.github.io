@@ -161,6 +161,7 @@ USE_TZ = False
 
 * [Flask](http://flask.pocoo.org/)
 * [requests](http://docs.python-requests.org/en/master/)
+* [httpx-异步版requests](https://www.python-httpx.org/)
 * [Django-rest-framework](http://www.django-rest-framework.org/)
 * [scrapy](https://scrapy.org/)
 * [falcon](https://falconframework.org/)
@@ -228,57 +229,7 @@ pydoc3 -p 7070
 * 通常我们会在项目的根目录下放置一个 requirement.txt 文件，用于记录所有依赖包和它的确切版本号。
 * 每行一个依赖包,可以指定包的具体版本
 
-```shell
-tencentcloud-sdk-python=3.0.720
-```
-
-### 连接memcached
-
-***
-
-```sh
-pip3 install pymemcache
-```
-
-```python
-#!python3
-from pymemcache.client.base import Client
-
-client = Client('localhost')
-
-memKey = '/memcached'
-
-client.set(memKey, '<HTML><H1>hello,world!</H1></HTML>')
-
-result = client.get(memKey)
-
-print(result)
-```
-
-### 连接redis
-
-***
-
-```sh
-pip3 install redis
-```
-
-```python
-#!python3
-import redis
-
-client = redis.Redis(host='localhost', port=6379, db=0)
-
-key = "python3Redis"
-
-client.set(key, "From Python3 Redis")
-
-resp = client.get(key)
-
-print(resp)
-```
-
-今天这篇文章，聊一下python在web开发上的一些基础实现，阐述下自己理解中的WSGI、ASGI，以及拿uvicorn+FastAPI的组合举个ASGI应用的例子。
+## web服务器与app协议之WSGI、ASGI
 
 * WSGI-同步web应用
 
@@ -308,70 +259,9 @@ async def application(scope, receive, send):
     await send({"type": "websocket.send", ...})
 ```
 
-### [百度开源Paddle](https://www.paddlepaddle.org.cn/)
-
-* 安装框架
-
-```bash
-python3 -m pip install paddlepaddle==2.3.1 -i https://mirror.baidu.com/pypi/simple
-```
-
-* 安装ocr
-
-```bash
-pip3 install "paddleocr>=2.0.1" -i https://mirror.baidu.com/pypi/simple
-```
-
-* [m1芯片特别安装](https://github.com/PaddlePaddle/PaddleOCR/issues/6720)
-  * Download source code locally
-  * In requirements.txt, update to opencv-contrib-python==4.6.0.66
-  * Pip install - r requirements.txt
-  * python setup.py install
-  * ppadleocr 安装在/opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin
-  * 第一次运行会下载训练好的模型到~/.paddleocr目录
-  * ln -s /opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin/paddleocr paddleocr
-
-* 安装paddleocrlabel
-
-* [m1芯片源码安装]
-
-  * 下载源码
-
-  ```bash
-  git clone git@github.com:PaddlePaddle/PaddleOCR.git
-  cd PPOCRLabel
-  python setup.py install
-  # 如果出现安装pyqt5失败,则采用brew install pyqt5
-  Installing PPOCRLabel script to /opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin
-  cd /opt/homebrew/bin
-  ln -s /opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin/PPOCRLabel PPOCRLabel
-
-
-  # 运行,第一运行会下载必要东西~/.paddleocr目录
-  PPOCRLabel --lang ch
-  # 针对特别业务,可以事先处理图片,再传入自动标注
-  ```
-
 ```bash
 # 直接下载whl文件,本地安装
 pip3 install xxx.whl
-```
-
-```bash
-# applie m1 芯片安装,会有问题，因为没有直接aarch64.whl,需要重头编译,但目前没有办法成功
-pip3 install pyqt5
-
-# 幸好brew可以帮忙编译
-brew install pyqt5
-```
-
-* 模型结构可视化VisualDL
-
-```bash
-python3 -m pip install visualdl -i https://mirror.baidu.com/pypi/simple
-# Running VisualDL at http://localhost:8040/ (Press CTRL+C to quit)
-./visualdl
-# 网络结构-静态，把模型文件拖进去<https://www.paddlepaddle.org.cn/inference/master/guides/export_model/visual_model.html>
 ```
 
 * 另一个神经网络模型可视化-[Netron](https://github.com/lutzroeder/Netron)
@@ -424,20 +314,6 @@ cv2.warpPerspective() 叫做透视变换。
 
 # 以彩色模式加载图片
 img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-```
-
-### numpy
-
-```python
-1、numpy.ones()函数
-可以创建任意维度和元素个数的数组，其元素值均为1
-2、使用语法
-numpy.ones(shape, dtype=None, order='C')
-b = np.ones((3,4),dtype=np.int64)
-print(b)
-[[1 1 1 1]
- [1 1 1 1]
- [1 1 1 1]]
 ```
 
 ### paddleocr

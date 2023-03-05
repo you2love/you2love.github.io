@@ -56,6 +56,7 @@ def change_title():
     import glob
     import re
 
+    src_path = '/Users/junjunyi/git-code/codeup-aliyun/book/src/golang'
     title_re = re.compile(r'title:\s*"(.*)"', re.M)
     md_list = glob.glob(os.path.join(src_path, "*.md"))
     for md_file in md_list:
@@ -79,6 +80,7 @@ def change_mermaid():
     import glob
     import re
 
+    src_path = '/Users/junjunyi/git-code/codeup-aliyun/book/src/golang'
     begin_mermaid_re = re.compile(r'\{\s*\{\s*<\s*mermaid\s*>\s*\}\s*\}', re.M)
     end_mermaid_re = re.compile(r'\{\s*\{\s*<\s*/mermaid\s*>\s*\}\s*\}', re.M)
     md_list = glob.glob(os.path.join(src_path, "*.md"))

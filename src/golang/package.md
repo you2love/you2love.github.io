@@ -1,0 +1,118 @@
+---
+# 常用包
+---
+
+***
+
+* [awesome-宝库值得多看](https://github.com/avelino/awesome-go)
+* [各个领域优秀库-中文版](https://github.com/jobbole/awesome-go-cn)
+* [lo-基于泛型加强基础功能库](https://github.com/samber/lo)
+* [funk-基于泛型加强基础功能库](https://github.com/thoas/go-funk)
+* [btree-google开源](https://github.com/google/btree)
+* [exp-官方扩展库值得一看](https://pkg.go.dev/golang.org/x/exp)
+* [stl4go-golang版的stl](https://github.com/chen3feng/stl4go)
+* [gorse-推荐系统](https://github.com/gorse-io/gorse)
+* [goreleaser-简化打包生成各个平台的包](https://github.com/looplab/fsm)
+* [conc-更好用的并发](https://github.com/sourcegraph/conc)
+* [fsm-有限状态自动机](https://goreleaser.com/)
+* [unioffice-golang读写doc/excel/ppt](https://github.com/unidoc/unioffice)
+* [cludewego-字节跳动开源框架](https://github.com/cloudwego)
+* [fastpb-更快的protobuf](https://github.com/cloudwego/fastpb)
+* [gogo-更快加强版protobuf](https://github.com/gogo/protobuf)
+* [template-更快的格式化输出](https://github.com/valyala/quicktemplate)
+* [wails-打包go后端+前端成一个exe](https://wails.app/)
+* [supervisord-golang版supervisor](https://github.com/ochinchina/supervisord)
+* [go-echarts-图形库](http://github.com/go-echarts/go-echarts/)
+* [go-num-golang版的numpy](https://github.com/gonum/gonum)
+* [colly-爬虫框架](https://github.com/gocolly/colly)
+* [ffmt-更友好fmt](https://github.com/go-ffmt/ffmt/)
+* [combin-排序组合](https://gonum.org/v1/gonum/stat/combin)
+* [set-泛型集合操作](https://github.com/deckarep/golang-set)
+* [carbon-方便的日期时间库](https://github.com/deckarep/golang-set)
+* [vugu-纯golang的前端](https://www.vugu.org/)
+* [air-有变化就编码](https://github.com/cosmtrek/air)
+* [gota-golang版的pands](https://github.com/go-gota/gota)
+* [plot-golang版plotnine](https://github.com/gonum/plot)
+* [fyne-跨平台gui](https://github.com/fyne-io/fyne)
+* [go-git-纯go实现git集成](https://github.com/go-git/go-git)
+* [go-cmp-自定义比较库](github.com/google/go-cmp)
+* [golang-opencv绑定](https://gocv.io/)
+* [另一个-opencv绑定](https://github.com/go-opencv/go-opencv)
+* [pdf-处理pdf库](https://github.com/pdfcpu/pdfcpu)
+* [assert库](https://github.com/stretchr/testify/assert)
+* [gse-golang结巴分词](github.com/go-ego/gse)
+* [chardet-编码猜测](https://github.com/saintfish/chardet)
+* [edlib-最小编辑距离及相似度](https://github.com/hbollon/go-edlib)
+* [TheAlgorithms-常见算法实现](https://github.com/TheAlgorithms/Go)
+* [datastructures-数据结构实现](https://github.com/Workiva/go-datastructures)
+* [kratos-微服务](https://go-kratos.dev)
+* [callvis-可视化调用](https://github.com/ofabry/go-callvis)
+* [deadlock-死锁检测](https://github.com/sasha-s/go-deadlock)
+* [类似json处理csv](https://github.com/gocarina/gocsv)
+* [cobra-优秀的命令行](https://github.com/spf13/cobra)
+* [更丰富的errors](https://github.com/pkg/errors)
+* [memcache](https://github.com/bradfitz/gomemcache/memcache)
+* [redis](https://github.com/gomodule/redigo/redis)
+* [mongodb](https://github.com/mongodb/mongo-go-driver)
+* [mysql](github.com/go-sql-driver/mysql)
+* [grpc](https://github.com/grpc/grpc-go/)
+* [grpc转换http接口](https://grpc-ecosystem.github.io/grpc-gateway/)
+* [iris](https://www.iris-go.com/)
+* [gin](https://gin-gonic.com/)
+* [echo](https://github.com/labstack/echo/)
+* [gorm](https://github.com/go-gorm)
+* [xorm](https://gitea.com/xorm/xorm)
+* [发邮件](https://github.com/go-gomail/gomail)
+* [更快的json](https://github.com/json-iterator/go)
+* [漂亮json输出](https://github.com/hokaccha/go-prettyjson)
+* [从json文档中直接读取相关值](https://github.com/tidwall/gjson)
+* [gohook动态替换函数](https://github.com/brahma-adshonor/gohook)
+* [go-cache-内存缓存](https://github.com/patrickmn/go-cache)
+* [二维码](https://github.com/skip2/go-qrcode)
+* [traceroute-路由跟踪](https://github.com/aeden/traceroute)
+* [tesseract-golang调用ocr](https://github.com/otiai10/gosseract)
+* [在标准输出中彩色输出](https://github.com/fatih/color)
+* [combination-组合库](github.com/mxschmitt/golang-combinations)
+* [perm-排列库](github.com/deltam/perm)
+* [中文GBK-utf8转换](https://golang.org/x/text/encoding/simplifiedchinese)
+* [各种跨类型-复制](https://github.com/jinzhu/copier)
+* [bloom-布隆过滤器](https://github.com/bits-and-blooms/bloom)
+* [操作excel](https://github.com/qax-os/excelize)
+* [多种格式配置文件](https://github.com/spf13/viper)
+* [日志库-logrus](https://github.com/sirupsen/logrus)
+* [日志库-glog](https://github.com/golang/glog)
+* [wechat-微信SDK](https://github.com/silenceper/wechat)
+* [gopacket](https://github.com/google/gopacket)
+* [更方便httpclient](https://github.com/go-resty/resty)
+* [swag文档](https://github.com/swaggo/swag)
+* [go-admin](https://github.com/GoAdminGroup/go-admin)
+* [tidb数据库](https://github.com/pingcap/tidb)
+* [nsq实时消息](https://github.com/nsqio/nsq)
+* [OpenIM](https://github.com/OpenIMSDK/Open-IM-Server)
+* [rpcx-微服务框架](https://github.com/smallnest/rpcx)
+* [go-zero](https://go-zero.dev)
+* [360的goreporter,几年没更新估计死掉了](https://github.com/qax-os/goreporter)
+* [Chromedp](http://github.com/chromedp/chromedp)
+  * chromedp是一个更快、更简单的Golang库用于调用支持Chrome DevTools协议的浏览器，同时不需要额外的依赖（例如Selenium和PhantomJS)
+  * Chrome DevTools其实就是Chrome浏览器按下F12之后的控制终端
+
+* [golang-request](https://github.com/carlmjohnson/requests)
+* [golang-另一个request](https://github.com/monaco-io/request)
+* [xlsx-另一个xlsx库](github.com/bingoohuang/xlsx),已知bug,列名不能互相包含,否则出错
+
+### 检查代码中是否包括密码密钥之类[gitleaks](https://github.com/zricethezav/gitleaks)
+
+```bash
+git clone https://github.com/zricethezav/gitleaks.git
+cd gitleaks
+make build
+# 主要可用在阻挡提交
+# detect protect
+gitleaks detect -s=. -r=out.json
+```
+
+### 检查代码中sql安全[gokart](https://github.com/praetorian-inc/gokart)
+
+### 检查代码安全[gosec](https://github.com/securego/gosec)
+
+### 检查魔术常量检查[go-mnd](https://github.com/tommy-muehle/go-mnd)

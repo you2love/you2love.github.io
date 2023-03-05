@@ -13,7 +13,7 @@
 
  1. 热更采用了基于C#的ILRuntime
 
-    ![et图](webp/et/et.webp "et图")
+    ![et图](/webp/et/et.webp "et图")
 
  2. 客户端目录结构
-    ![client图](webp/et/client.webp "client图")
+    ![client图](/webp/et/client.webp "client图")

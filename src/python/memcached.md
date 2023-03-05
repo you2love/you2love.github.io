@@ -1,5 +1,9 @@
 # memcached示例
 
+```sh
+pip3 install pymemcache
+```
+
 ```python
 #!python3
 from pymemcache.client.base import Client

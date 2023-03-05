@@ -46,6 +46,10 @@ def aliyun(img_url):
 
 ## tencent
 
+```shell
+tencentcloud-sdk-python=3.0.720
+```
+
 ```python
 # pip install tencentcloud-sdk-python=3.0.720
 

@@ -28,7 +28,7 @@ Debug.Log ("Stack Info:" + trackStr);
 
 ### 组件图
 
-![组件图](webp/unity/component.webp "组件图")
+![组件图](/webp/unity/component.webp "组件图")
 
 ### 常见热更方案
 
