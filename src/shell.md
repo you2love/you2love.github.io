@@ -394,3 +394,21 @@ sudo lshw -numeric -C display显示显卡信息，lspci | grep -i vga
 # 降低权限
 chmod 0600 ~/.ssh/id_ecdsa
 ```
+
+### mlocate-更快的find
+
+> 这个命令的原理是，先为文件系统创建索引数据库，mlocate只是搜索索引，所以速度快
+对于新增文件应该先updatedb更新数据库，否则就搜不到，当然更新索引时，执行updatedb还是比较快的
+mlocate在很多系统中和locate同名
+
+```bash
+
+#创建索引 扫描整个系统，为整个系统创建索引，数据库在/var/lib/mlocate/mlocate.db
+sudo updatedb
+
+mlocate  abc.txt
+
+mlocate  -ie  abc.txt   如果 abc.txt已经删除了，使用-e会检查文件是否真实存在，而不必updatedb；-i，忽略大小写
+
+mlocate  /etc/*profile   在/etc中查找类似profile的文件
+```
