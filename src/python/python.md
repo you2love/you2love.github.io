@@ -334,3 +334,5 @@ else:
 ```
 
 * Tensor 是 Paddle Inference 的数据组织形式，用于对底层数据进行封装并提供接口对数据进行操作，包括设置 Shape、数据、LoD 信息等。 注意： 应使用 Predictor 的 get_input_handle 和 get_output_handle 接口获取输入输出 Tensor
+
+### ipynb文件格式-Jupyter Notebook产生的

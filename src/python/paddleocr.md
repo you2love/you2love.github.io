@@ -5,7 +5,7 @@
 * 安装框架
 
 ```bash
-python3 -m pip install paddlepaddle==2.3.1 -i https://mirror.baidu.com/pypi/simple
+python3 -m pip install paddlepaddle==2.4.2 -i https://mirror.baidu.com/pypi/simple
 ```
 
 * 安装ocr
@@ -92,3 +92,28 @@ im_show = draw_ocr(image, boxes, txts, scores, font_path='simfang.ttf')
 im_show = Image.fromarray(im_show)
 im_show.save('result.jpg')
 ```
+
+### [运行 Dynamic shape](https://www.paddlepaddle.org.cn/inference/master/guides/nv_gpu_infer/gpu_trt_infer.html)
+
+>当模型的输入 shape 不固定的话（如 OCR，NLP 的相关模型），需要推理框架提供动态 shape 的支持。
+从1.8 版本开始， Paddle Inference 对 TensorRT 子图进行了 Dynamic shape 的支持。 使用接口如下：
+
+```python
+ config.enable_tensorrt_engine(
+  workspace_size = 1<<30,
+  max_batch_size=1, min_subgraph_size=5,
+  precision_mode=paddle_infer.PrecisionType.Float32,
+  use_static=False, use_calib_mode=False)
+
+ min_input_shape = {"image":[1,3, 10, 10]}
+ max_input_shape = {"image":[1,3, 224, 224]}
+ opt_input_shape = {"image":[1,3, 100, 100]}
+
+ config.set_trt_dynamic_shape_info(min_input_shape, max_input_shape, opt_input_shape)
+```
+
+> 从上述使用方式来看，在 config.enable_tensorrt_engine 接口的基础上，新加了一个 config.set_trt_dynamic_shape_info 的接口。
+“image” 对应模型文件中输入的名称。
+该接口用来设置模型输入的最小、最大、以及最优的输入 shape。
+其中，最优的 shape 处于最小最大 shape 之间，在推理初始化期间，会根据opt shape对 Op 选择最优的 Kernel 。
+调用了 config.set_trt_dynamic_shape_info 接口，推理器会运行 TensorRT 子图的动态输入模式，运行期间可以接受最小、最大 shape 间的任意 shape 的输入数据。
