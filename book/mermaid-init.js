@@ -1,1 +1,0 @@
-mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]).then(() => mermaid.initialize({startOnLoad: true}));
