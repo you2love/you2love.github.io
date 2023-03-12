@@ -23,3 +23,11 @@ BUILD_USER ?= $(shell id -un)
 ?= 是如果没有被赋值过就赋予等号后面的值
 += 是添加等号后面的值
 ```
+
+### 生成makefile的cmakelist介绍
+
+![cmakelist](/webp/makefile/cmakelist.webp)
+
+### makelist介绍
+
+![intro](/webp/makefile/intro.webp)

@@ -8524,6 +8524,7 @@ git clean -fd
 <li><a href="https://github.com/protocolbuffers/protobuf/releases">github下载</a></li>
 <li><a href="https://github.com/protocolbuffers/protobuf-go/releases/">protobuf-go插件</a></li>
 <li><a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-gateway-http转grpc</a></li>
+<li><a href="https://github.com/swagger-api/swagger-codegen">swagger.json-根据api接口client</a></li>
 <li><a href="https://docs.buf.build/">buf-强化pb生成</a></li>
 <li><a href="https://www.rkdev.info/">rk-golang微服务框架</a></li>
 <li><a href="https://github.com/grpc/grpc-swift">grpc-swift语言实现</a></li>
@@ -9625,6 +9626,22 @@ exit
 # 降低权限
 chmod 0600 ~/.ssh/id_ecdsa
 </code></pre>
+<h3 id="mlocate-更快的find"><a class="header" href="#mlocate-更快的find">mlocate-更快的find</a></h3>
+<blockquote>
+<p>这个命令的原理是，先为文件系统创建索引数据库，mlocate只是搜索索引，所以速度快
+对于新增文件应该先updatedb更新数据库，否则就搜不到，当然更新索引时，执行updatedb还是比较快的
+mlocate在很多系统中和locate同名</p>
+</blockquote>
+<pre><code class="language-bash">
+#创建索引 扫描整个系统，为整个系统创建索引，数据库在/var/lib/mlocate/mlocate.db
+sudo updatedb
+
+mlocate  abc.txt
+
+mlocate  -ie  abc.txt   如果 abc.txt已经删除了，使用-e会检查文件是否真实存在，而不必updatedb；-i，忽略大小写
+
+mlocate  /etc/*profile   在/etc中查找类似profile的文件
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><hr />
 <h1 id="wireshark"><a class="header" href="#wireshark">wireshark</a></h1>
 <hr />
@@ -10016,6 +10033,10 @@ BUILD_USER ?= $(shell id -un)
 ?= 是如果没有被赋值过就赋予等号后面的值
 += 是添加等号后面的值
 </code></pre>
+<h3 id="生成makefile的cmakelist介绍"><a class="header" href="#生成makefile的cmakelist介绍">生成makefile的cmakelist介绍</a></h3>
+<p><img src="/webp/makefile/cmakelist.webp" alt="cmakelist" /></p>
+<h3 id="makelist介绍"><a class="header" href="#makelist介绍">makelist介绍</a></h3>
+<p><img src="/webp/makefile/intro.webp" alt="intro" /></p>
 <div style="break-before: page; page-break-before: always;"></div><hr />
 <h1 id="github"><a class="header" href="#github">github</a></h1>
 <hr />
@@ -11397,9 +11418,28 @@ magick convert -density 300 -trim a.pdf -quality 100 a.jpg
 <h1 id="ai"><a class="header" href="#ai">ai</a></h1>
 <hr />
 <ul>
-<li>Finetuning
-Fine tuning的原理就是利用已知的网络结构和已知的网络参数，修改output层为我们自己的层，微调最后一层前的所有层的参数，加大最后一层的学习率，因为最后一层我们需要重新学习，所以与其它层相比要有相对较大的学习率，这样就有效利用了深度神经网络强大的泛化能力，又免去了设计复杂的模型以及耗时良久的训练，所以fine tuning是当数据量不足时的一个比较合适的选择。</li>
+<li>
+<p>Finetuning
+Fine tuning的原理就是利用已知的网络结构和已知的网络参数，修改output层为我们自己的层，微调最后一层前的所有层的参数，加大最后一层的学习率，因为最后一层我们需要重新学习，所以与其它层相比要有相对较大的学习率，这样就有效利用了深度神经网络强大的泛化能力，又免去了设计复杂的模型以及耗时良久的训练，所以fine tuning是当数据量不足时的一个比较合适的选择。</p>
+</li>
+<li>
+<p>Input type (torch.cuda.FloatTensor) and weight type (torch.FloatTensor) should be the</p>
+</li>
 </ul>
+<p>规解决方案
+从报错问题描述中可以找到错误原因</p>
+<p>输入的数据类型为torch.cuda.FloatTensor，说明输入数据在GPU中
+模型参数的数据类型为torch.FloatTensor，说明模型还在CPU
+问题原因搞清楚了，模型没加载到CPU，在代码中加一行语句就可以了</p>
+<p>model = model.cuda()
+model = model.to('cuda')
+model.cuda()
+model.to('cuda')
+上面四行任选一，还有其他未列出的表述方法，都可以将模型加载到GPU。</p>
+<p>反之Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the问题来源是输入数据没有加载到GPU，解决方法为</p>
+<p>tensor = tensor.cuda()
+tensor = tensor.to('cuda')
+任选任选</p>
 <div style="break-before: page; page-break-before: always;"></div><hr />
 <h1 id="wasm"><a class="header" href="#wasm">wasm</a></h1>
 <hr />
