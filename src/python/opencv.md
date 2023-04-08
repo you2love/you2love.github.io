@@ -1,5 +1,7 @@
 # opencv示例
 
+## 透视
+
 ```python
 #!python3
 # -*- coding:utf8 -*-
@@ -35,5 +37,23 @@ cv2.imshow("processed", processed)
 cv2.imshow("img_gray_rgb", img_gray_rgb)
 
 cv2.waitKey(0)
+
+```
+
+## 旋转
+
+```python
+import cv2
+
+img = cv2.imread("rotate.png")
+h, w = img.shape[:2]
+center = (w / 2, h)
+angle = 2.0
+scale = 1.0
+m = cv2.getRotationMatrix2D(center,angle,scale)
+r = cv2.warpAffine(img, m,(w, h))
+cv2.imwrite("result.png", r)
+# cv2.imshow("rate",r)
+# cv2.waitKey()
 
 ```
