@@ -299,6 +299,9 @@ ln -s 真实存在目录 软链接
 ```sh
 # 使用-j参数 不处理压缩文件中原来目录路径
 zip -qj file.zip /xxx/xx/xx
+
+# Parallel
+https://linux.cn/article-9718-1.html  使用 GNU Parallel 提高 Linux 命令行执行效率
 ```
 
 ## 示例脚本

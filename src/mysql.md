@@ -672,3 +672,4 @@ select  GROUP_CONCAT(sch_name) from sch_basic_info sbi group by sch_id HAVING co
 * [postgresql-开源替代品](https://www.postgresql.org/)
 * [c++-图数据库](https://www.nebula-graph.io/)
 * [golang-图数据库](https://github.com/dgraph-io/dgraph)
+* [ferretdb-开源的mongodb替代品](https://docs.ferretdb.io/)

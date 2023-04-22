@@ -28,3 +28,17 @@ go build -o ${target} -ldflags "-w -s -X main.GitHash=${GITVERSION}-${GITBRANCH}
 
 ./${target}
 ```
+
+### 性能调优
+
+> win下载[graphviz](https://graphviz.org/download/)
+
+```bash
+go tool pprof cpu.profile
+
+# 产生svg图示
+svg
+help
+top10
+list xxx
+```

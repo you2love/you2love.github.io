@@ -426,3 +426,8 @@ JSON Lines 是一种文本格式，适用于存储大量结构相似的嵌套数
 ### 这里是 Ant Design 的 Vue 实现，开发和服务于企业级后台产品(<https://2x.antdv.com/docs/vue/introduce-cn>)
 
 ### [github-404项目](https://github.com/knownsec/404StarLink)
+
+gimp 颜色拾取工具 按住shift点击指定位置，弹出颜色拾取对话框，就会有像素值
+wps开始，排序，自定义排序，可以多重排序
+https://www.zhihu.com/question/496033808 opencv中的霍夫线变换，ρ取负值时怎么理解
+https://blog.csdn.net/WZZ18191171661/article/details/101116949
