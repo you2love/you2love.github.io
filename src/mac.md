@@ -507,3 +507,10 @@ ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.0.104
 * mac电脑的默认字体-苹方字体，中文就是-苹方-简,有专门的"字体册"app管理
 
 * 编程仅好字体 Menlo, Monaco, 'Courier New', monospace 12大小
+
+* socket: operation not permitted - socket 无权限监听问题,一次性给root权限
+
+```sh
+sudo chown root:admin xxx
+sudo chmod +sx xxx
+```
