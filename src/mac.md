@@ -221,6 +221,8 @@
 
       * English word hint
 
+      * Peacock 自定义标题栏及左侧的颜色，同时打开多个vscode有用
+
       * vscode-fileheader 插入文件头注释,并且自动更新时间及作者
 
    3. 自带markdown preview功能,cmd+shift+v

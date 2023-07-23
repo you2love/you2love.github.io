@@ -99,6 +99,7 @@
 * [golang-request](https://github.com/carlmjohnson/requests)
 * [golang-另一个request](https://github.com/monaco-io/request)
 * [xlsx-另一个xlsx库](github.com/bingoohuang/xlsx),已知bug,列名不能互相包含,否则出错
+* [snappy-高速压缩解压包](https://github.com/golang/snappy/)
 
 ### 检查代码中是否包括密码密钥之类[gitleaks](https://github.com/zricethezav/gitleaks)
 
