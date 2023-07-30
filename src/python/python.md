@@ -145,6 +145,7 @@ dir(obj)
 * [flet-flutter的python包装](https://www.flet.dev/)
 * [pydantic-类型注解加强版](https://docs.pydantic.dev/)
 * [anaconda-独立开源包管理器](https://www.anaconda.com/)
+* nltk spacy两个python的自然语言库
 
 > Anaconda包括Conda、Python以及一大堆安装好的工具包，比如：numpy、pandas等
 Miniconda包括Conda、Python
