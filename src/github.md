@@ -148,3 +148,9 @@ Host github2
 # git@github.com:xxx/yyy -> git@github3:xxx/yyy
 # git@github.com:xxx/yyy -> git@github2:xxx/yyy
 ```
+
+### git项目在github打不开的时候,采用gitee映像解决
+
+* <https://gitee.com/organizations/mirrors/projects>
+* 搜索开源项目
+* 修改远程地址, 一般情况下都有的.如果没有,可以自已创建项目同步克隆github代码

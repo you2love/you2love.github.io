@@ -165,6 +165,7 @@ USE_TZ = False
 * [requests](http://docs.python-requests.org/en/master/)
 * [httpx-异步版requests](https://www.python-httpx.org/)
 * [Django-rest-framework](http://www.django-rest-framework.org/)
+* [scrapy-splash-配合scrapy无界面浏览器](https://splash-cn-doc.readthedocs.io/zh_CN/latest/scrapy-splash-toturial.html)
 * [scrapy](https://scrapy.org/)
 * [falcon](https://falconframework.org/)
 * [odoo以前openERP](https://www.odoo.com/zh_CN)
