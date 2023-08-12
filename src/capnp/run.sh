@@ -1,0 +1,1 @@
+capnp compile -I ~/git-code/github/go-capnp/std -ogo book.capnp

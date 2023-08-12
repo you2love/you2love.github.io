@@ -14,6 +14,7 @@
 * [buf-强化pb生成](https://docs.buf.build/)
 * [rk-golang微服务框架](https://www.rkdev.info/)
 * [grpc-swift语言实现](https://github.com/grpc/grpc-swift)
+* [capnp-更快的protobuf](https://capnproto.org)
 
 ```sh
 #mac系统中采用brew,很可能已安装过
