@@ -6,6 +6,7 @@
 
 * [zinc-golang版本替代品](https://github.com/zinclabs/zinc)
 * [meili-rust版本替代品](https://github.com/meilisearch/MeiliSearch)
+* [meili-rust版本替代品](https://typesense.org/)
 
 ```bash
 docker run --name ms1.0 --restart always -p 9080:7700 -v $(pwd)/meili_data:/meili_data -d getmeili/meilisearch:v1.0
