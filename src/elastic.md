@@ -5,8 +5,8 @@
 ### [官网](https://www.elastic.co/)
 
 * [zinc-golang版本替代品](https://github.com/zinclabs/zinc)
-* [meili-rust版本替代品](https://github.com/meilisearch/MeiliSearch)
-* [meili-rust版本替代品](https://typesense.org/)
+* [meili-rust版本替代品自带web界面](https://www.meilisearch.com/)
+* [typesense-c++版本替代品](https://typesense.org/)
 
 ```bash
 docker run --name ms1.0 --restart always -p 9080:7700 -v $(pwd)/meili_data:/meili_data -d getmeili/meilisearch:v1.0
