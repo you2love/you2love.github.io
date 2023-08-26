@@ -21,6 +21,14 @@
     * 带来更多名词,增加心智负担,精力分散在语言之外过多
     * 严重偏向开源开发模式,对闭源开发不友好
 
+* Go 生态系统中有着许多中国 Gopher 们无法获取的模块,因此设置 CDN 加速代理就很有必要了，以下是几个速度不错的提供者：
+
+* go env -w GOPROXY=xxx,direct
+* 七牛：Goproxy 中国 (<https://goproxy.cn>)
+* 阿里： (mirrors.aliyun.com/goproxy/)
+* 官方： 全球 CDN 加速 (<https://goproxy.io/>)
+* 其他：jfrog 维护 (<https://gocenter.io>)
+
 ### 环境变量
 
 ***
