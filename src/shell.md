@@ -415,3 +415,7 @@ mlocate  -ie  abc.txt   如果 abc.txt已经删除了，使用-e会检查文件�
 
 mlocate  /etc/*profile   在/etc中查找类似profile的文件
 ```
+
+### 古老的netrc,windows是_netrc文件
+
+> .netrc文件是unix系统中古老的文件，该.netrc文件格式于 1978 年发明并首次用于Berknet，此后一直被各种工具和库使用。顺便说一句，这就是英特尔推出 8086 的同一年，而 DNS 还不存在。几十年来，ftp、curl（从 1998 年夏天开始）、wget、fetchmail 和大量其他工具和网络库一直支持 .netrc。在许多情况下，它是向远程系统提供凭据的唯一跨工具方式。

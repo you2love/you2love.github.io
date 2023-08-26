@@ -2,6 +2,12 @@
 # wireshark
 ---
 
+### 替代品
+
+* [Sniffnet 是一个基于 Rust 的网络监控工具，可让你跟踪通过系统的所有互联网流量]
+
+* [proxypin-开源的http/https抓包工具]
+
 ### 抓https,http2包
 
 ***

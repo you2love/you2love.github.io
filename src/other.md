@@ -162,6 +162,10 @@ brew install --cask wkhtmltopdf
 * 国内dns地址
 
 ```sh
+字节DNS
+180.184.1.1
+180.184.2.2
+
 腾讯 DNS
 119.29.29.29
 182.254.116.116

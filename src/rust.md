@@ -65,3 +65,7 @@ cargo install mdbook-pdf
 cargo install mdbook-mermaid
 cargo install mdbook-toc
 ```
+
+### 相关资源
+
+* [google开源的rust教程](https://github.com/google/comprehensive-rust)
