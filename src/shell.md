@@ -419,3 +419,7 @@ mlocate  /etc/*profile   在/etc中查找类似profile的文件
 ### 古老的netrc,windows是_netrc文件
 
 > .netrc文件是unix系统中古老的文件，该.netrc文件格式于 1978 年发明并首次用于Berknet，此后一直被各种工具和库使用。顺便说一句，这就是英特尔推出 8086 的同一年，而 DNS 还不存在。几十年来，ftp、curl（从 1998 年夏天开始）、wget、fetchmail 和大量其他工具和网络库一直支持 .netrc。在许多情况下，它是向远程系统提供凭据的唯一跨工具方式。
+
+### Delta RPM
+
+> Delta RPM软件包包含RPM软件包的新旧版本之间的差异。在旧的RPM上应用增量RPM会得到完整的新RPM。不必拥有旧RPM的副本，
