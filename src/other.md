@@ -214,6 +214,7 @@ utm一个虚拟机对应一个utm文件,当初次创建可能需要iso,等iso安
 * [菜鸟教程-入门必看](https://www.runoob.com/)
 * [Consul-服务发现和配置](https://www.consul.io/)
 * [优质chrome插件-国内下载离线安装](https://www.crxfun.com)
+* [优质chrome插件-收藏猫的插件](https://chrome.pictureknow.com/)
 * [fastlane-自动部署工具](https://docs.fastlane.tools/)
 * [BUG监控-开发者报警](https://Fundebug/)
 * [tesseract-谷歌的ocr开源](https://github.com/tesseract-ocr/tesseract)
