@@ -423,3 +423,5 @@ mlocate  /etc/*profile   在/etc中查找类似profile的文件
 ### Delta RPM
 
 > Delta RPM软件包包含RPM软件包的新旧版本之间的差异。在旧的RPM上应用增量RPM会得到完整的新RPM。不必拥有旧RPM的副本，
+
+### startship.rs值得一用

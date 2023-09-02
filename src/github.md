@@ -162,3 +162,12 @@ Host github2
 * <https://gitee.com/organizations/mirrors/projects>
 * 搜索开源项目
 * 修改远程地址, 一般情况下都有的.如果没有,可以自已创建项目同步克隆github代码
+
+### 优秀的github项目
+
+* <https://www.github-zh.com/>
+* <https://github.com/GrowingGit/GitHub-Chinese-Top-Charts>
+* <https://github.com/ruanyf/weekly>
+* <https://github.com/EbookFoundation/free-programming-books>
+* <https://github.com/521xueweihan/HelloGitHub/>
+* <https://github.com/ljinkai/weekly>

@@ -358,6 +358,8 @@
 
 * docker file lint/ docker high light
 
+* chinese localization----中文汉化
+
 * 主题及color主题是两种，可以分开选择
 
 ### 9. [chrome](https://github.com/Eloston/ungoogled-chromium),无google全家桶的chrome
