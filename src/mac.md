@@ -141,7 +141,7 @@
 
       * **tabnine** 有免费的AI助手编码,必须强赞一下
 
-      * **CodeGeex** 另一个自动生成代码
+      * **CodeGeex** 另一个自动生成代码 <https://codegeex.cn/>
 
       * shellman shellcheck shell-format(Alt+Shift+F) Code Runner
 
@@ -370,6 +370,12 @@
 brew install --cask eloston-chromium
 ```
 
+### 10. [marktext](https://github.com/marktext/marktext),开源免费的markdown编辑器
+
+```bash
+brew install --cask eloston-chromium
+```
+
 ## [利用蓝牙传输文件](https://support.apple.com/zh-cn/guide/mac-help/mchle7fa9e15/mac)
 
 ***
@@ -392,6 +398,22 @@ brew install --cask eloston-chromium
 
    >解决办法:在Finder中找到应用程序,并找到该程序,右键->打开
    ![右键打开](webp/mac/rightopen.webp "右键打开")
+
+## “xxx.app”已损坏，无法打开。 你应该将它移到废纸篓
+
+* 终端执行,打开允许任意来源app
+
+```sh
+sudo spctl --master-disable
+```
+
+* 手动执行相信特定app
+
+```sh
+sudo xattr -rd com.apple.quarantine /Applications/xxx.app/
+```
+
+* 系统设置-->隐私性及安全-->调回只任信store及开发者,防止其他app误操作
 
 ## 开机启动
 
