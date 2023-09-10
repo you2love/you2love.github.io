@@ -117,7 +117,8 @@ flowchart LR
 
  ***
 
-* [githubs中文社区](https://www.githubs.cn/)
+* [githubs中文社区](https://www.github-zh.com/)
+* [wiki.js-优秀的wiki](https://js.wiki/)
 * [alist-各种网盘分享](https://github.com/alist-org/alist)非常优秀,值得试试
 * [腾讯兔小巢](https://txc.qq.com/)快速建立用户反馈系统,值得试试
 * [wkhtmltopdf-html转pdf](https://wkhtmltopdf.org/)把html转化为pdf
