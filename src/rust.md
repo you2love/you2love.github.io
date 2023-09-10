@@ -2,7 +2,7 @@
 # Rust
 ---
 
-* [官网](https://www.rust-lang.org/)
+# [官网](https://www.rust-lang.org/)
 
 ```sh
 Rustup metadata and toolchains will be installed into the Rustup
@@ -69,3 +69,4 @@ cargo install mdbook-toc
 ### 相关资源
 
 * [google开源的rust教程](https://github.com/google/comprehensive-rust)
+* [有用的库及工具-强烈建议看看](https://lib.rs/)
