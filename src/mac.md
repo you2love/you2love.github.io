@@ -364,6 +364,22 @@
 
 * 主题及color主题是两种，可以分开选择
 
+```sh
+vim ~/.zshrc
+
+# Set Sublime Text Alias
+alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+
+# 使配置生效
+source ~/.zshrc
+
+# 打开sublime
+subl
+
+# 使用sublime打开当前目录
+subl .
+```
+
 ### 9. [chrome](https://github.com/Eloston/ungoogled-chromium),无google全家桶的chrome
 
 ```bash
