@@ -330,11 +330,15 @@
 * 安装markdown插件 markdown Editing
   * cmd+shift+p 然后输入 install package 输入 [markdown Editing]
 
-* Rainbow CSV
-
 * Rainbow Brackets
 
 * Git
+
+* GitGutter 更进一步
+
+* GitSyntaxes
+
+* tabnine插件
 
 * AutoFileName
 
@@ -348,9 +352,9 @@
 
 * SQL Formatter
 
-* GitSyntaxes
-
 * advanced CSV
+
+* Rainbow CSV
 
 * JsFormat
 
@@ -363,6 +367,8 @@
 * chinese words cutter-中文分词
 
 * 主题及color主题是两种，可以分开选择
+
+* SideBar Enhancements
 
 ```sh
 vim ~/.zshrc
