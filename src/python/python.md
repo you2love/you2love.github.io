@@ -132,6 +132,7 @@ dir(obj)
 ```
 
 * [fabric](http://www.fabfile.org/)
+* [yagmail-发邮件](https://pypi.org/project/yagmail/)
 * [awesome-python](https://github.com/vinta/awesome-python)
 * [Selenium是一个用电脑模拟人操作浏览器网页](https://www.selenium.dev/)
 * [nicegui-纯python生成html的gui](https://github.com/zauberzeug/nicegui)

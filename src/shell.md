@@ -10,10 +10,41 @@
 * dust代替du
 * procs代替ps
 * difft替代diff
-* McFly(<https://github.com/cantino/mcfly>)
+* McFly(<https://github.com/cantino/mcfly>) 执行时间久,会影响启动速度
 * zoxide代替cd,可能不用启动z
 * tldr替代man, [tldr-github](https://github.com/tldr-pages/tldr) pip install tldr
 * ctrl+r 搜索历史命令
+
+### tmux-会话与窗口分离器
+
+```sh
+brew install tmux
+Tmux 是一个终端复用器（terminal multiplexer），非常有用，属于常用的开发工具。
+1.1 会话与进程
+
+命令行的典型使用方式是，打开一个终端窗口（terminal window，以下简称"窗口"），在里面输入命令。用户与计算机的这种临时的交互，称为一次"会话"（session） 。
+
+会话的一个重要特点是，窗口与其中启动的进程是连在一起的。打开窗口，会话开始；关闭窗口，会话结束，会话内部的进程也会随之终止，不管有没有运行完。
+
+为了解决这个问题，会话与窗口可以"解绑"：窗口关闭时，会话并不终止，而是继续运行，等到以后需要的时候，再让会话"绑定"其他窗口。
+
+Tmux 可以将窗口分成多个窗格（pane），每个窗格运行不同的命令。以下命令都是在 Tmux 窗口中执行。
+
+tmux split-window 上下
+tmux split-window -h 左右
+
+# 光标切换到上方窗格
+$ tmux select-pane -U
+
+# 光标切换到下方窗格
+$ tmux select-pane -D
+
+# 光标切换到左边窗格
+$ tmux select-pane -L
+
+# 光标切换到右边窗格
+$ tmux select-pane -R
+```
 
 ```bash
 # 或者ctrl+r

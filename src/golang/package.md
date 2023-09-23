@@ -6,6 +6,7 @@
 
 * [awesome-宝库值得多看](https://github.com/avelino/awesome-go)
 * [各个领域优秀库-中文版](https://github.com/jobbole/awesome-go-cn)
+* [纯go实现全功能pdf库](https://github.com/pdfcpu/pdfcpu)
 * [lint-绝对需要](github.com/golangci/golangci-lint)
 * [lo-基于泛型加强基础功能库](https://github.com/samber/lo)
 * [funk-基于泛型加强基础功能库](https://github.com/thoas/go-funk)
