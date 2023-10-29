@@ -2,6 +2,16 @@
 # shell
 ---
 
+## man中文手册(<https://github.com/man-pages-zh/manpages-zh>)
+
+```sh
+sudo apt update
+sudo apt install manpages-zh
+
+dnf update
+dnf install man-pages-zh-CN
+```
+
 ## 升级替换系统命令-[modern-unix)](https://github.com/ibraheemdev/modern-unix)
 
 * bat代替cat, bat 相比 cat 增加了行号和颜色高亮 👍

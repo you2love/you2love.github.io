@@ -77,6 +77,10 @@ flowchart LR
 * 社区优秀的免费和付费书籍（如果有的话）；
 * 优秀的出版书籍（如果有的话）
 
+### DBeaver 增加第三方mavn，加速驱动下载
+
+* 窗口/首选项/DBeaver/驱动/maven/添加 <http://maven.aliyun.com/nexus/content/groups/public/>
+
 ### 华为手机自定义安装VLC
 
 ***
