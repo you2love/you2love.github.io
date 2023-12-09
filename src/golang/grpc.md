@@ -4,6 +4,14 @@
 
 # server
 
+|工具 |介绍|
+|--|--|
+|protobuf protocol |buffer 编译所需的命令行|
+|protoc-gen-go |从 proto 文件，生成 .go 文件|
+|protoc-gen-go-grpc |从 proto 文件，生成 GRPC 相关的 .go 文件|
+|protoc-gen-grpc-gateway |从 proto 文件，生成 grpc-gateway 相关的 .go 文件|
+|protoc-gen-openapiv2 |从 proto 文件，生成 swagger 界面所需的参数|
+
 ***
 
 ```golang
