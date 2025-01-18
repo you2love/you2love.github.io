@@ -216,4 +216,6 @@ message Order {
 
 * [protoc-go-inject-tag类似的gen-gotag](https://github.com/favadi/protoc-go-inject-tag)
 
+* [protoc-gen-gotags类似的gen-gotag](https://github.com/eirueirufu/protoc-gen-gotags)
+
 * gRPC + Opentracing + Zipkin 分布式链路追踪系统
