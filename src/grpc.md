@@ -2,7 +2,7 @@
 # grpc
 ---
 
-### 相关网站
+# 相关网站
 
 ***
 
@@ -12,6 +12,8 @@
 * [grpc-gateway-http转grpc](https://github.com/grpc-ecosystem/grpc-gateway)
 * [swagger.json-根据api接口client](https://github.com/swagger-api/swagger-codegen)
 * [buf-强化pb生成](https://docs.buf.build/)
+* ![图示原理-2](webp/grpc/proto-1.webp)
+* ![图示原理-2](webp/grpc/proto-2.webp)
 * [rk-golang微服务框架](https://www.rkdev.info/)
 * [grpc-swift语言实现](https://github.com/grpc/grpc-swift)
 * [capnp-更快的protobuf](https://capnproto.org)
@@ -22,7 +24,7 @@ brew list | grep protobuf
 brew info protobuf
 ```
 
-### golang使用图示
+## golang使用图示
 
 ***
 
@@ -207,5 +209,11 @@ message Order {
 ### 更多
 
 ***
+
+* [protoc-gen-doc生成文档插件](https://github.com/pseudomuto/protoc-gen-doc)
+
+* [protoc-gen-gotag增加struct任意tag插件](https://github.com/srikrsna/protoc-gen-gotag)
+
+* [protoc-go-inject-tag类似的gen-gotag](https://github.com/favadi/protoc-go-inject-tag)
 
 * gRPC + Opentracing + Zipkin 分布式链路追踪系统
