@@ -10,5 +10,5 @@ pip install --break-system-packages websocket
 
 
 pip3 install -U uiautomator2 --break-system-packages
-pip3 install -U uiautomator2 --break-system-packages
+pip3 install -U uiautodev --break-system-packages
 ```
