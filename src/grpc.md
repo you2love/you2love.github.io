@@ -212,91 +212,106 @@ message Order {
 
 #### 1. **protoc-gen-go**
 
-- **功能**: 生成 Go 代码，将 `.proto` 文件转换为 Go 结构体和序列化代码。
+* **功能**: 生成 Go 代码，将 `.proto` 文件转换为 Go 结构体和序列化代码。
+
 * **安装**: `go install google.golang.org/protobuf/cmd/protoc-gen-go@latest`
 * **使用**: `protoc --go_out=. your_proto_file.proto`
 
 #### 2. **protoc-gen-go-grpc**
 
-- **功能**: 生成 gRPC 服务代码，用于 gRPC 服务端和客户端。
+* **功能**: 生成 gRPC 服务代码，用于 gRPC 服务端和客户端。
+
 * **安装**: `go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest`
 * **使用**: `protoc --go-grpc_out=. your_proto_file.proto`
 
 #### 3. **protoc-gen-gogo**
 
-- **功能**: `protoc-gen-go` 的增强版，提供更多功能和优化。
+* **功能**: `protoc-gen-go` 的增强版，提供更多功能和优化。
+
 * **安装**: `go install github.com/gogo/protobuf/protoc-gen-gogo@latest`
 * **使用**: `protoc --gogo_out=. your_proto_file.proto`
 
 #### 4. **protoc-gen-validate**
 
-- **功能**: 生成字段验证代码，基于 `validate.proto` 文件中的规则。
+* **功能**: 生成字段验证代码，基于 `validate.proto` 文件中的规则。
+
 * **安装**: `go install github.com/envoyproxy/protoc-gen-validate@latest`
 * **使用**: `protoc --validate_out="lang=go:. your_proto_file.proto`
 
 #### 5. **protoc-gen-doc**
 
-- **功能**: 生成 `.proto` 文件的文档，支持多种格式。
+* **功能**: 生成 `.proto` 文件的文档，支持多种格式。
+
 * **安装**: `go install github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@latest`
 * **使用**: `protoc --doc_out=. your_proto_file.proto`
 
 #### 6. **protoc-gen-grpc-gateway**
 
-- **功能**: 生成 gRPC-Gateway 代码，将 gRPC 服务转换为 RESTful API。
+* **功能**: 生成 gRPC-Gateway 代码，将 gRPC 服务转换为 RESTful API。
+
 * **安装**: `go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@latest`
 * **使用**: `protoc --grpc-gateway_out=. your_proto_file.proto`
 
 #### 7. **protoc-gen-swagger**
 
-- **功能**: 生成 Swagger/OpenAPI 文档，通常与 gRPC-Gateway 配合使用。
+* **功能**: 生成 Swagger/OpenAPI 文档，通常与 gRPC-Gateway 配合使用。
+
 * **安装**: `go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@latest`
 * **使用**: `protoc --openapiv2_out=. your_proto_file.proto`
 
 #### 8. **protoc-gen-gotag**
 
-- **功能**: 为生成的 Go 结构体添加自定义标签。
+* **功能**: 为生成的 Go 结构体添加自定义标签。
+
 * **安装**: `go install github.com/srikrsna/protoc-gen-gotag@latest`
 * **使用**: `protoc --gotag_out=. your_proto_file.proto`
 
 #### 9. **protoc-gen-gorm**
 
-- **功能**: 生成 GORM 模型代码，便于数据库操作。
+* **功能**: 生成 GORM 模型代码，便于数据库操作。
+
 * **安装**: `go install github.com/infobloxopen/protoc-gen-gorm@latest`
 * **使用**: `protoc --gorm_out=. your_proto_file.proto`
 
 #### 10. **protoc-gen-inject-tag**
 
-- **功能**: 为生成的 Go 结构体注入自定义标签。
+* **功能**: 为生成的 Go 结构体注入自定义标签。
+
 * **安装**: `go install github.com/favadi/protoc-gen-inject-tag@latest`
 * **使用**: `protoc --inject-tag_out=. your_proto_file.proto`
 
 #### 11. **protoc-gen-go-grpc-http**
 
-- **功能**: 生成支持 HTTP/JSON 的 gRPC 服务代码。
+* **功能**: 生成支持 HTTP/JSON 的 gRPC 服务代码。
+
 * **安装**: `go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-http@latest`
 * **使用**: `protoc --grpc-http_out=. your_proto_file.proto`
 
 #### 12. **protoc-gen-twirp**
 
-- **功能**: 生成 Twirp 服务代码，Twirp 是另一种 RPC 框架。
+* **功能**: 生成 Twirp 服务代码，Twirp 是另一种 RPC 框架。
+
 * **安装**: `go install github.com/twitchtv/twirp/protoc-gen-twirp@latest`
 * **使用**: `protoc --twirp_out=. your_proto_file.proto`
 
 #### 13. **protoc-gen-go-binary**
 
-- **功能**: 生成二进制序列化和反序列化代码。
+* **功能**: 生成二进制序列化和反序列化代码。
+
 * **安装**: `go install github.com/golang/protobuf/protoc-gen-go-binary@latest`
 * **使用**: `protoc --go-binary_out=. your_proto_file.proto`
 
 #### 14. **protoc-gen-grpc-web**
 
-- **功能**: 生成 gRPC-Web 客户端代码，适用于浏览器环境。
+* **功能**: 生成 gRPC-Web 客户端代码，适用于浏览器环境。
+
 * **安装**: `go install github.com/grpc/grpc-web/protoc-gen-grpc-web@latest`
 * **使用**: `protoc --grpc-web_out=. your_proto_file.proto`
 
 #### 15. **protoc-gen-grpc-gateway-ts**
 
-- **功能**: 生成 TypeScript 客户端代码，适用于 gRPC-Gateway。
+* **功能**: 生成 TypeScript 客户端代码，适用于 gRPC-Gateway。
+
 * **安装**: `go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway-ts@latest`
 * **使用**: `protoc --grpc-gateway-ts_out=. your_proto_file.proto`
 
@@ -353,3 +368,84 @@ message Order {
 18. **protoc-gen-validate**: 提供了在.proto文件中指定验证规则的能力，并生成相应的验证逻辑。这对于确保数据完整性至关重要，尤其是在分布式系统中。
 
 19. **protoc-gen-natsrpc**: 如果你在使用NATS作为消息队列或事件驱动架构的一部分，那么这个插件可以帮助你快速实现基于protobuf的消息传输机制。
+
+### 自定义插件
+
+```proto
+syntax = "proto3";
+package test;
+option go_package = "/test";
+​
+​
+message User {
+  //用户名
+  string Name = 1;
+  //用户资源
+  map<int32,string> Res=2 ;
+}
+```
+
+```golang
+package main
+​
+import (
+    "bytes"
+    "fmt"
+    "google.golang.org/protobuf/compiler/protogen"
+    "google.golang.org/protobuf/types/pluginpb"
+    "google.golang.org/protobuf/proto"
+    "io/ioutil"
+    "os"
+)
+​
+func main()  {
+    //1.读取标准输入，接收proto 解析的文件内容，并解析成结构体
+    input, _ := ioutil.ReadAll(os.Stdin)
+    var req pluginpb.CodeGeneratorRequest
+    proto.Unmarshal(input, &req)
+    //2.生成插件
+    opts := protogen.Options{}
+    plugin, err := opts.New(&req)
+    if err != nil {
+        panic(err)
+    }
+​
+    // 3.在插件plugin.Files就是demo.proto 的内容了,是一个切片，每个切片元素代表一个文件内容
+    // 我们只需要遍历这个文件就能获取到文件的信息了
+    for _, file := range plugin.Files {
+        //创建一个buf 写入生成的文件内容
+        var buf bytes.Buffer
+​
+        // 写入go 文件的package名
+        pkg := fmt.Sprintf("package %s", file.GoPackageName)
+        buf.Write([]byte(pkg))
+​
+        //遍历消息,这个内容就是protobuf的每个消息
+        for _, msg := range file.Messages {
+            //接下来为每个消息生成hello 方法
+            
+            buf.Write([]byte(fmt.Sprintf(`
+             func (m*%s)Hello(){
+​
+                }
+             `,msg.GoIdent.GoName)))
+        }
+        //指定输入文件名,输出文件名为demo.foo.go
+        filename := file.GeneratedFilenamePrefix + ".foo.go"
+        file := plugin.NewGeneratedFile(filename, ".")
+// 将内容写入插件文件内容
+        file.Write(buf.Bytes())
+    }
+​
+    // 生成响应
+    stdout := plugin.Response()
+    out, err := proto.Marshal(stdout)
+    if err != nil {
+        panic(err)
+    }
+​
+    // 将响应写回 标准输入, protoc会读取这个内容
+    fmt.Fprintf(os.Stdout, string(out))
+}
+​
+```
