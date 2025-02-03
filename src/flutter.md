@@ -2,9 +2,9 @@
 # flutter
 ---
 
-### [中文官网](https://flutter.cn)
+# [中文官网](https://flutter.cn)
 
-### 常用命令
+## 常用命令
 
 ```bash
 # 检查环境
@@ -132,3 +132,188 @@ cd git-code/github/flutter-website
 ![第一步](webp/flutter/xcode_ipa_1.webp)
 
 ![第二步](webp/flutter/xcode_ipa_2.webp)
+
+Flutter 是一个强大的 UI 框架，提供了丰富的 **Widget** 来构建应用程序。以下是 Flutter 的基础、重点和常用 Widget 的分类和说明，以及它们之间的关系图。
+
+---
+
+## **Flutter Widget 分类**
+
+### 1. **基础 Widget**
+
+这些是 Flutter 中最基本的 Widget，用于构建 UI 的骨架。
+
+* **`Text`**：显示文本。
+* **`Image`**：显示图片。
+* **`Icon`**：显示图标。
+* **`Container`**：用于布局和装饰的通用容器。
+* **`Row`** 和 **`Column`**：用于水平（Row）和垂直（Column）排列子 Widget。
+* **`Stack`**：用于将子 Widget 堆叠在一起。
+* **`Padding`**：为子 Widget 添加内边距。
+* **`Center`**：将子 Widget 居中显示。
+
+---
+
+### 2. **布局 Widget**
+
+用于控制 Widget 的排列和布局。
+
+* **`ListView`**：可滚动的列表。
+* **`GridView`**：网格布局。
+* **`Expanded`** 和 **`Flexible`**：在 Row 或 Column 中分配空间。
+* **`SizedBox`**：固定大小的盒子。
+* **`AspectRatio`**：按比例调整子 Widget 的大小。
+* **`ConstrainedBox`**：对子 Widget 施加约束。
+* **`Align`**：对齐子 Widget。
+
+---
+
+### 3. **交互 Widget**
+
+用于处理用户输入和交互。
+
+* **`GestureDetector`**：检测手势（如点击、拖动等）。
+* **`InkWell`**：带水波纹效果的点击区域。
+* **`TextField`**：文本输入框。
+* **`Button`**（如 `ElevatedButton`、`TextButton`、`OutlinedButton`）：按钮。
+* **`Checkbox`** 和 **`Radio`**：复选框和单选按钮。
+* **`Slider`**：滑动条。
+* **`Switch`**：开关。
+
+---
+
+### 4. **样式和装饰 Widget**
+
+用于美化 UI。
+
+* **`DecoratedBox`**：为子 Widget 添加装饰（如背景、边框）。
+* **`BoxDecoration`**：定义装饰样式（颜色、边框、阴影等）。
+* **`Theme`**：应用主题样式。
+* **`TextStyle`**：定义文本样式。
+* **`ClipRRect`**：裁剪 Widget 为圆角矩形。
+
+---
+
+### 5. **状态管理 Widget**
+
+用于管理 Widget 的状态。
+
+* **`StatefulWidget`**：有状态的 Widget。
+* **`StatelessWidget`**：无状态的 Widget。
+* **`InheritedWidget`**：在 Widget 树中共享数据。
+* **`Provider`**（第三方库）：状态管理的推荐方式。
+
+---
+
+### 6. **动画 Widget**
+
+用于实现动画效果。
+
+* **`AnimatedContainer`**：带动画效果的 Container。
+* **`AnimatedOpacity`**：带动画效果的透明度。
+* **`Hero`**：实现页面切换时的共享元素动画。
+* **`TweenAnimationBuilder`**：自定义动画。
+
+---
+
+### 7. **导航和路由 Widget**
+
+用于页面导航。
+
+* **`Navigator`**：管理页面堆栈。
+* **`MaterialPageRoute`**：Material 风格的页面路由。
+* **`BottomNavigationBar`**：底部导航栏。
+* **`TabBar`** 和 **`TabView`**：标签页导航。
+
+---
+
+### 8. **平台相关 Widget**
+
+用于适配不同平台（iOS 和 Android）。
+
+* **`CupertinoApp`**：iOS 风格的应用程序。
+* **`CupertinoButton`**：iOS 风格的按钮。
+* **`CupertinoNavigationBar`**：iOS 风格的导航栏。
+
+---
+
+## **Flutter Widget 关系图**
+
+以下是 Flutter 常用 Widget 的关系图（简化版）：
+
+```shell
+Widget
+├── StatelessWidget
+│   ├── Text
+│   ├── Image
+│   ├── Icon
+│   ├── Container
+│   ├── Row
+│   ├── Column
+│   ├── Stack
+│   └── Padding
+│
+├── StatefulWidget
+│   ├── Checkbox
+│   ├── Radio
+│   ├── Slider
+│   ├── Switch
+│   └── TextField
+│
+├── Layout Widgets
+│   ├── ListView
+│   ├── GridView
+│   ├── Expanded
+│   ├── SizedBox
+│   └── Align
+│
+├── Interaction Widgets
+│   ├── GestureDetector
+│   ├── InkWell
+│   ├── ElevatedButton
+│   ├── TextButton
+│   └── OutlinedButton
+│
+├── Styling Widgets
+│   ├── DecoratedBox
+│   ├── BoxDecoration
+│   ├── Theme
+│   └── ClipRRect
+│
+├── Animation Widgets
+│   ├── AnimatedContainer
+│   ├── AnimatedOpacity
+│   ├── Hero
+│   └── TweenAnimationBuilder
+│
+├── Navigation Widgets
+│   ├── Navigator
+│   ├── MaterialPageRoute
+│   ├── BottomNavigationBar
+│   └── TabBar
+│
+└── Platform Widgets
+    ├── CupertinoApp
+    ├── CupertinoButton
+    └── CupertinoNavigationBar
+```
+
+---
+
+## **重点 Widget**
+
+1. **`StatelessWidget` 和 `StatefulWidget`**：所有 Widget 的基础。
+2. **`Container`**：最常用的布局和装饰 Widget。
+3. **`Row` 和 `Column`**：用于构建复杂的布局。
+4. **`ListView` 和 `GridView`**：用于显示大量数据。
+5. **`Navigator`**：用于页面导航。
+6. **`Provider`**：状态管理的推荐方式。
+
+---
+
+## **总结**
+
+* Flutter 的 Widget 分为基础、布局、交互、样式、状态管理、动画、导航和平台相关等类别。
+
+* 掌握这些 Widget 的使用方法是 Flutter 开发的基础。
+* 通过组合这些 Widget，可以构建出复杂的 UI 界面。
