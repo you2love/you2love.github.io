@@ -249,3 +249,133 @@ Android系统的ROM（Read-Only Memory）是一个包含操作系统、应用程
 ### 最后总结
 
 Android系统的ROM是一个复杂的文件集合，包含系统核心文件、应用、库、配置文件和刷机脚本等。不同ROM（官方或第三方）的文件结构可能有所不同，但核心功能相似。刷机时，这些文件会被写入设备的相应分区，从而完成系统的安装或更新。理解ROM的文件结构有助于更好地进行刷机、调试和定制。
+
+在 Android 设备中，各个分区会被挂载到特定的目录下，这些目录是文件系统的一部分，用于访问和管理分区中的数据。以下是常见的 Android 分区及其挂载点的详细说明：
+
+---
+
+## 分区挂载
+
+### 1. **常见的 Android 分区及其挂载点**
+
+| 分区名称         | 挂载点（目录）       | 作用描述                                                                 |
+|------------------|----------------------|------------------------------------------------------------------------|
+| **`system`**     | `/system`            | 包含 Android 操作系统、系统应用和库文件。                               |
+| **`vendor`**     | `/vendor`            | 包含设备制造商提供的驱动和硬件相关文件。                                |
+| **`data`**       | `/data`              | 包含用户数据、应用程序数据和个人文件。                                  |
+| **`cache`**      | `/cache`             | 用于存储临时文件和系统缓存。                                            |
+| **`persist`**    | `/persist`           | 存储持久化数据，如设备的校准信息和传感器数据。                          |
+| **`misc`**       | `/misc`              | 存储一些杂项信息，如 Bootloader 的启动标志。                            |
+| **`firmware`**   | `/firmware`          | 包含设备的固件文件（如基带固件）。                                      |
+| **`odm`**        | `/odm`               | 包含设备制造商的自定义文件（如品牌 Logo、预装应用等）。                 |
+| **`metadata`**   | `/metadata`          | 用于加密文件系统的元数据分区。                                          |
+| **`sdcard`**     | `/storage/emulated/0`| 外部存储分区，用于存储用户文件（如照片、视频等）。                      |
+| **`userdata`**   | `/data`              | 与 `data` 分区类似，某些设备将 `data` 和 `userdata` 合并。              |
+| **`boot`**       | 无挂载点             | 包含内核和初始内存磁盘，用于启动设备，不挂载到文件系统。                |
+| **`recovery`**   | 无挂载点             | 包含 Recovery 模式，用于系统恢复和更新，不挂载到文件系统。              |
+
+---
+
+### 2. **挂载点的作用**
+
+* **`/system`**：
+  * 包含 Android 系统的核心文件，如系统应用、库文件和配置文件。
+  * 通常以只读（`ro`）方式挂载，防止用户误修改系统文件。
+
+* **`/vendor`**：
+  * 包含设备制造商提供的驱动和硬件相关文件。
+  * 用于确保设备硬件与系统兼容。
+* **`/data`**：
+  * 包含用户数据和应用程序数据。
+  * 是用户存储文件、安装应用和保存设置的主要位置。
+* **`/cache`**：
+  * 用于存储临时文件和系统缓存。
+  * 可以安全清除，用于解决系统卡顿或更新问题。
+* **`/persist`**：
+  * 存储持久化数据，如设备的校准信息和传感器数据。
+  * 即使恢复出厂设置，数据也不会被清除。
+* **`/firmware`**：
+  * 包含设备的固件文件，如基带（Modem）固件。
+  * 用于管理设备的通信功能（如蜂窝网络、Wi-Fi 等）。
+* **`/odm`**：
+  * 包含设备制造商的自定义文件，如品牌 Logo 和预装应用。
+  * 用于提供设备的定制化功能。
+* **`/metadata`**：
+  * 用于加密文件系统的元数据分区。
+  * 在启用文件系统加密时使用。
+* **`/storage/emulated/0`**：
+  * 外部存储分区，用于存储用户文件（如照片、视频等）。
+  * 在 Android 中，外部存储通常被模拟为 `/storage/emulated/0`。
+
+---
+
+### 3. **如何查看分区的挂载信息**
+
+可以通过以下方法查看 Android 设备的分区挂载信息：
+
+#### **方法 1：通过 ADB 命令查看**
+
+1. **连接设备**：
+   * 使用 USB 线将设备连接到电脑，并启用 USB 调试模式。
+2. **打开终端或命令提示符**：
+   * 输入以下命令查看挂载信息：
+
+     ```bash
+     adb shell mount
+     ```
+
+   * 或者查看 `/proc/mounts` 文件：
+
+     ```bash
+     adb shell cat /proc/mounts
+     ```
+
+#### **方法 2：通过终端模拟器查看**
+
+1. **安装终端模拟器**：
+   * 在设备上安装终端模拟器应用（如 Termux 或 Android Terminal Emulator）。
+2. **运行命令**：
+   * 输入以下命令查看挂载信息：
+
+     ```bash
+     mount
+     ```
+
+   * 或者查看 `/proc/mounts` 文件：
+
+     ```bash
+     cat /proc/mounts
+     ```
+
+#### **方法 3：通过文件管理器查看**
+
+1. **安装文件管理器**：
+   * 在设备上安装支持 Root 权限的文件管理器（如 Solid Explorer、Root Explorer）。
+2. **查看挂载点**：
+   * 导航到根目录（`/`），查看各个挂载点（如 `/system`、`/data` 等）。
+
+---
+
+### 4. **挂载点的示例输出**
+
+以下是 `adb shell mount` 或 `mount` 命令的示例输出：
+
+```plaintext
+/dev/block/bootdevice/by-name/system on /system type ext4 (ro,seclabel,relatime)
+/dev/block/bootdevice/by-name/vendor on /vendor type ext4 (ro,seclabel,relatime)
+/dev/block/bootdevice/by-name/userdata on /data type ext4 (rw,seclabel,nosuid,nodev,noatime)
+/dev/block/bootdevice/by-name/cache on /cache type ext4 (rw,seclabel,nosuid,nodev,noatime)
+/dev/block/bootdevice/by-name/persist on /persist type ext4 (rw,seclabel,nosuid,nodev,noatime)
+```
+
+* **`/dev/block/bootdevice/by-name/system`**：分区的块设备路径。
+
+* **`/system`**：挂载点。
+* **`ext4`**：文件系统类型。
+* **`(ro,seclabel,relatime)`**：挂载选项。
+
+---
+
+### 5. **总结**
+
+Android 设备的分区会挂载到特定的目录下，如 `/system`、`/data`、`/cache` 等。这些挂载点是文件系统的一部分，用于访问和管理分区中的数据。通过 ADB、终端模拟器或文件管理器，可以查看分区的挂载信息。理解分区挂载点的作用，有助于更好地管理和调试 Android 设备。
