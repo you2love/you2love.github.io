@@ -2,6 +2,8 @@
 # 泛型切片分组
 ---
 
+# group
+
 ```golang
 func GroupBy[T any, U comparable](collection []T, iteratee func(T) U) map[U][]T {
  result := map[U][]T{}

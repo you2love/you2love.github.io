@@ -449,3 +449,183 @@ func main()  {
 }
 ​
 ```
+
+在 Protocol Buffers (Protobuf) 中，**扩展（Extensions）** 是一种机制，允许你在不修改原始消息定义的情况下，向消息中添加额外的字段。这在需要扩展第三方或已定义的消息类型时非常有用。
+
+在 **proto3** 中，扩展的功能有所限制，但仍然可以通过 `Any` 类型或自定义选项来实现类似的功能。以下是一个详细的示例，展示如何在 proto3 中使用扩展。
+
+---
+
+### 1. 扩展的基本概念
+
+在 proto2 中，扩展是通过 `extend` 关键字实现的。但在 proto3 中，`extend` 关键字被移除了，官方推荐使用 `Any` 类型或自定义选项来实现扩展。
+
+#### 1.1 使用 `Any` 类型
+
+`Any` 类型是 proto3 提供的一种通用类型，可以存储任意序列化的 Protobuf 消息。通过 `Any` 类型，你可以动态地将附加数据嵌入到消息中。
+
+#### 1.2 使用自定义选项
+
+自定义选项是通过定义 `google.protobuf.FieldOptions` 或其他选项类型来实现的。你可以为字段添加自定义元数据。
+
+---
+
+### 2. 示例：使用 `Any` 类型实现扩展
+
+以下是一个使用 `Any` 类型实现扩展的示例。
+
+#### 2.1 定义 `.proto` 文件
+
+```proto
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+
+// 定义一个基础消息
+message BaseMessage {
+  string id = 1;
+  google.protobuf.Any extension = 2; // 用于存储扩展数据
+}
+
+// 定义一个扩展消息
+message ExtendedMessage {
+  int32 extra_field = 1;
+}
+```
+
+#### 2.2 使用扩展
+
+在代码中，你可以将 `ExtendedMessage` 嵌入到 `BaseMessage` 的 `Any` 字段中。
+
+```go
+package main
+
+import (
+ "fmt"
+ "log"
+
+ "google.golang.org/protobuf/proto"
+ "google.golang.org/protobuf/types/known/anypb"
+
+ "github.com/yourusername/yourproject/proto" // 替换为你的模块路径
+)
+
+func main() {
+ // 创建一个 ExtendedMessage
+ extendedMsg := &proto.ExtendedMessage{
+  ExtraField: 42,
+ }
+
+ // 将 ExtendedMessage 打包为 Any 类型
+ anyMsg, err := anypb.New(extendedMsg)
+ if err != nil {
+  log.Fatalf("Failed to pack ExtendedMessage into Any: %v", err)
+ }
+
+ // 创建一个 BaseMessage 并设置扩展字段
+ baseMsg := &proto.BaseMessage{
+  Id:        "123",
+  Extension: anyMsg,
+ }
+
+ // 序列化 BaseMessage
+ data, err := proto.Marshal(baseMsg)
+ if err != nil {
+  log.Fatalf("Failed to marshal BaseMessage: %v", err)
+ }
+
+ // 反序列化 BaseMessage
+ newBaseMsg := &proto.BaseMessage{}
+ if err := proto.Unmarshal(data, newBaseMsg); err != nil {
+  log.Fatalf("Failed to unmarshal BaseMessage: %v", err)
+ }
+
+ // 从 Any 字段中提取 ExtendedMessage
+ newExtendedMsg := &proto.ExtendedMessage{}
+ if err := newBaseMsg.GetExtension().UnmarshalTo(newExtendedMsg); err != nil {
+  log.Fatalf("Failed to unpack ExtendedMessage from Any: %v", err)
+ }
+
+ // 打印结果
+ fmt.Printf("BaseMessage ID: %s\n", newBaseMsg.GetId())
+ fmt.Printf("ExtendedMessage ExtraField: %d\n", newExtendedMsg.GetExtraField())
+}
+```
+
+---
+
+### 3. 示例：使用自定义选项实现扩展
+
+以下是一个使用自定义选项实现扩展的示例。
+
+#### 3.1 定义自定义选项
+
+首先，定义一个自定义选项：
+
+```proto
+syntax = "proto3";
+
+import "google/protobuf/descriptor.proto";
+
+// 定义自定义选项
+extend google.protobuf.FieldOptions {
+  string custom_option = 50000;
+}
+
+// 使用自定义选项
+message MyMessage {
+  string field1 = 1 [(custom_option) = "custom_value"];
+}
+```
+
+#### 3.2 使用自定义选项
+
+在代码中，你可以通过反射访问自定义选项的值。
+
+```go
+package main
+
+import (
+ "fmt"
+ "log"
+ "reflect"
+
+ "google.golang.org/protobuf/proto"
+ "google.golang.org/protobuf/reflect/protoreflect"
+ "google.golang.org/protobuf/types/descriptorpb"
+
+ "github.com/yourusername/yourproject/proto" // 替换为你的模块路径
+)
+
+func main() {
+ // 获取 MyMessage 的描述符
+ msgType := proto.MessageType("proto.MyMessage").Elem()
+ msgDescriptor := msgType.New().Interface().(protoreflect.ProtoMessage).ProtoReflect().Descriptor()
+
+ // 获取字段描述符
+ fieldDescriptor := msgDescriptor.Fields().ByName("field1")
+
+ // 获取字段选项
+ options := fieldDescriptor.Options().(*descriptorpb.FieldOptions)
+
+ // 获取自定义选项的值
+ customOptionValue := proto.GetExtension(options, proto.E_CustomOption).(string)
+ fmt.Printf("Custom option value: %s\n", customOptionValue)
+}
+```
+
+### 4. 总结
+
+在 proto3 中，扩展的功能主要通过以下方式实现：
+
+1. **使用 `Any` 类型**：动态嵌入任意消息类型。
+2. **使用自定义选项**：为字段添加元数据。
+
+这两种方式都可以在不修改原始消息定义的情况下扩展消息的功能。根据具体需求选择合适的方式即可。
+
+### 参考文档
+
+* [Protocol Buffers 官方文档](https://developers.google.com/protocol-buffers)
+
+* [Any 类型文档](https://pkg.go.dev/google.golang.org/protobuf/types/known/anypb)
+* [自定义选项文档](https://developers.google.com/protocol-buffers/docs/proto3#customoptions)
