@@ -623,3 +623,525 @@ func main() {
 
 * [Any 类型文档](https://pkg.go.dev/google.golang.org/protobuf/types/known/anypb)
 * [自定义选项文档](https://developers.google.com/protocol-buffers/docs/proto3#customoptions)
+
+作为 Protobuf 专家，`MethodOptions` 的自定义选项在定义 RPC 方法时非常有用，能够为方法添加额外的元数据或行为控制。以下是一些经典的 `MethodOptions` 自定义选项应用场景：
+
+作为 Protobuf 专家，`MethodOptions` 的自定义选项在定义 RPC 方法时非常有用，能够为方法添加额外的元数据或行为控制。以下是一些经典的 `MethodOptions` 自定义选项应用场景：
+
+---
+
+### 1. **方法超时配置**
+
+* **用途**: 为 RPC 方法配置超时时间，确保方法在指定时间内完成。
+* **示例**: 标记方法的超时时间。
+
+   ```protobuf
+   import "google/protobuf/descriptor.proto";
+
+   extend google.protobuf.MethodOptions {
+     int32 timeout_ms = 50000;
+   }
+
+   service MyService {
+     rpc MyMethod(MyRequest) returns (MyResponse) {
+       option (timeout_ms) = 5000; // 5 seconds
+     }
+   }
+   ```
+
+---
+
+### 2. **方法重试策略**
+
+* **用途**: 为 RPC 方法配置重试策略，如重试次数和重试间隔。
+* **示例**: 标记方法的最大重试次数和重试间隔。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     int32 max_retries = 50001;
+     int32 retry_interval_ms = 50002;
+   }
+
+   service MyService {
+     rpc MyMethod(MyRequest) returns (MyResponse) {
+       option (max_retries) = 3;
+       option (retry_interval_ms) = 1000; // 1 second
+     }
+   }
+   ```
+
+---
+
+### 3. **方法安全性配置**
+
+* **用途**: 为 RPC 方法配置安全性要求，如是否需要身份验证或加密。
+* **示例**: 标记方法是否需要身份验证。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     bool requires_authentication = 50003;
+   }
+
+   service MyService {
+     rpc SecureMethod(SecureRequest) returns (SecureResponse) {
+       option (requires_authentication) = true;
+     }
+   }
+   ```
+
+---
+
+### 4. **方法权限控制**
+
+* **用途**: 为 RPC 方法配置权限要求，如用户角色或权限级别。
+* **示例**: 标记方法所需的用户角色。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string required_role = 50004;
+   }
+
+   service MyService {
+     rpc AdminMethod(AdminRequest) returns (AdminResponse) {
+       option (required_role) = "ADMIN";
+     }
+   }
+   ```
+
+---
+
+### 5. **方法性能优化**
+
+* **用途**: 为 RPC 方法配置性能优化选项，如是否启用压缩或缓存。
+* **示例**: 标记方法是否启用响应缓存。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     bool enable_caching = 50005;
+   }
+
+   service MyService {
+     rpc GetData(DataRequest) returns (DataResponse) {
+       option (enable_caching) = true;
+     }
+   }
+   ```
+
+---
+
+### 6. **方法日志配置**
+
+* **用途**: 为 RPC 方法配置日志记录行为，如是否记录详细日志。
+* **示例**: 标记方法是否启用详细日志记录。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     bool enable_detailed_logging = 50006;
+   }
+
+   service MyService {
+     rpc LoggedMethod(LoggedRequest) returns (LoggedResponse) {
+       option (enable_detailed_logging) = true;
+     }
+   }
+   ```
+
+---
+
+### 7. **方法路由配置**
+
+* **用途**: 为 RPC 方法配置路由信息，便于在分布式系统中进行消息分发。
+* **示例**: 标记方法的路由键或目标服务。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string routing_key = 50007;
+   }
+
+   service MyService {
+     rpc RoutedMethod(RoutedRequest) returns (RoutedResponse) {
+       option (routing_key) = "service_a";
+     }
+   }
+   ```
+
+---
+
+### 8. **方法负载均衡策略**
+
+* **用途**: 为 RPC 方法配置负载均衡策略。
+* **示例**: 标记方法的负载均衡策略（如 `ROUND_ROBIN`, `LEAST_CONNECTIONS`）。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string load_balancing_strategy = 50008;
+   }
+
+   service MyService {
+     rpc BalancedMethod(BalancedRequest) returns (BalancedResponse) {
+       option (load_balancing_strategy) = "ROUND_ROBIN";
+     }
+   }
+   ```
+
+---
+
+### 9. **方法扩展插件支持**
+
+* **用途**: 为 RPC 方法添加插件支持的配置，如自定义代码生成插件。
+* **示例**: 为自定义插件提供配置选项。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string plugin_option = 50009;
+   }
+
+   service MyService {
+     rpc PluginMethod(PluginRequest) returns (PluginResponse) {
+       option (plugin_option) = "custom_value";
+     }
+   }
+   ```
+
+---
+
+### 10. **方法优先级**
+
+* **用途**: 为 RPC 方法配置优先级，便于在任务调度或资源分配中处理。
+* **示例**: 标记方法的优先级（如 `HIGH`, `MEDIUM`, `LOW`）。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string priority = 50010;
+   }
+
+   service MyService {
+     rpc HighPriorityMethod(HighPriorityRequest) returns (HighPriorityResponse) {
+       option (priority) = "HIGH";
+     }
+   }
+   ```
+
+---
+
+### 11. **方法跨平台兼容性**
+
+* **用途**: 为 RPC 方法配置跨平台兼容性选项。
+* **示例**: 标记方法在特定平台上的行为。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string platform_specific = 50011;
+   }
+
+   service MyService {
+     rpc PlatformMethod(PlatformRequest) returns (PlatformResponse) {
+       option (platform_specific) = "windows";
+     }
+   }
+   ```
+
+---
+
+### 12. **方法生命周期管理**
+
+* **用途**: 为 RPC 方法配置生命周期状态，如是否已弃用。
+* **示例**: 标记方法的状态（如 `ACTIVE`, `DEPRECATED`, `REMOVED`）。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string lifecycle_status = 50012;
+   }
+
+   service MyService {
+     rpc DeprecatedMethod(DeprecatedRequest) returns (DeprecatedResponse) {
+       option (lifecycle_status) = "DEPRECATED";
+     }
+   }
+   ```
+
+---
+
+### 13. **方法流量控制**
+
+* **用途**: 为 RPC 方法配置流量控制策略，如限流或速率限制。
+* **示例**: 标记方法的速率限制（如每秒请求数）。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     int32 rate_limit = 50013;
+   }
+
+   service MyService {
+     rpc RateLimitedMethod(RateLimitedRequest) returns (RateLimitedResponse) {
+       option (rate_limit) = 100; // 100 requests per second
+     }
+   }
+   ```
+
+### 14. **方法监控配置**
+
+* **用途**: 为 RPC 方法配置监控选项，如是否启用性能监控。
+* **示例**: 标记方法是否启用性能监控。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     bool enable_performance_monitoring = 50014;
+   }
+
+   service MyService {
+     rpc MonitoredMethod(MonitoredRequest) returns (MonitoredResponse) {
+       option (enable_performance_monitoring) = true;
+     }
+   }
+   ```
+
+### 总结
+
+`MethodOptions` 的自定义选项为 Protobuf 的 RPC 方法提供了强大的扩展能力，能够满足各种复杂的应用场景。通过合理使用这些选项，可以增强方法的元数据管理、行为控制、跨平台兼容性以及与其他系统的集成能力。这些选项在微服务架构、API 管理和分布式系统中尤其有用。
+
+### 1. **方法超时配置**
+
+* **用途**: 为 RPC 方法配置超时时间，确保方法在指定时间内完成。
+* **示例**: 标记方法的超时时间。
+
+   ```protobuf
+   import "google/protobuf/descriptor.proto";
+
+   extend google.protobuf.MethodOptions {
+     int32 timeout_ms = 50000;
+   }
+
+   service MyService {
+     rpc MyMethod(MyRequest) returns (MyResponse) {
+       option (timeout_ms) = 5000; // 5 seconds
+     }
+   }
+   ```
+
+### 2. **方法重试策略**
+
+* **用途**: 为 RPC 方法配置重试策略，如重试次数和重试间隔。
+* **示例**: 标记方法的最大重试次数和重试间隔。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     int32 max_retries = 50001;
+     int32 retry_interval_ms = 50002;
+   }
+
+   service MyService {
+     rpc MyMethod(MyRequest) returns (MyResponse) {
+       option (max_retries) = 3;
+       option (retry_interval_ms) = 1000; // 1 second
+     }
+   }
+   ```
+
+### 3. **方法安全性配置**
+
+* **用途**: 为 RPC 方法配置安全性要求，如是否需要身份验证或加密。
+* **示例**: 标记方法是否需要身份验证。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     bool requires_authentication = 50003;
+   }
+
+   service MyService {
+     rpc SecureMethod(SecureRequest) returns (SecureResponse) {
+       option (requires_authentication) = true;
+     }
+   }
+   ```
+
+### 4. **方法权限控制**
+
+* **用途**: 为 RPC 方法配置权限要求，如用户角色或权限级别。
+* **示例**: 标记方法所需的用户角色。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string required_role = 50004;
+   }
+
+   service MyService {
+     rpc AdminMethod(AdminRequest) returns (AdminResponse) {
+       option (required_role) = "ADMIN";
+     }
+   }
+   ```
+
+### 5. **方法性能优化**
+
+* **用途**: 为 RPC 方法配置性能优化选项，如是否启用压缩或缓存。
+* **示例**: 标记方法是否启用响应缓存。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     bool enable_caching = 50005;
+   }
+
+   service MyService {
+     rpc GetData(DataRequest) returns (DataResponse) {
+       option (enable_caching) = true;
+     }
+   }
+   ```
+
+### 6. **方法日志配置**
+
+* **用途**: 为 RPC 方法配置日志记录行为，如是否记录详细日志。
+* **示例**: 标记方法是否启用详细日志记录。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     bool enable_detailed_logging = 50006;
+   }
+
+   service MyService {
+     rpc LoggedMethod(LoggedRequest) returns (LoggedResponse) {
+       option (enable_detailed_logging) = true;
+     }
+   }
+   ```
+
+### 7. **方法路由配置**
+
+* **用途**: 为 RPC 方法配置路由信息，便于在分布式系统中进行消息分发。
+* **示例**: 标记方法的路由键或目标服务。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string routing_key = 50007;
+   }
+
+   service MyService {
+     rpc RoutedMethod(RoutedRequest) returns (RoutedResponse) {
+       option (routing_key) = "service_a";
+     }
+   }
+   ```
+
+### 8. **方法负载均衡策略**
+
+* **用途**: 为 RPC 方法配置负载均衡策略。
+* **示例**: 标记方法的负载均衡策略（如 `ROUND_ROBIN`, `LEAST_CONNECTIONS`）。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string load_balancing_strategy = 50008;
+   }
+
+   service MyService {
+     rpc BalancedMethod(BalancedRequest) returns (BalancedResponse) {
+       option (load_balancing_strategy) = "ROUND_ROBIN";
+     }
+   }
+   ```
+
+### 9. **方法扩展插件支持**
+
+* **用途**: 为 RPC 方法添加插件支持的配置，如自定义代码生成插件。
+* **示例**: 为自定义插件提供配置选项。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string plugin_option = 50009;
+   }
+
+   service MyService {
+     rpc PluginMethod(PluginRequest) returns (PluginResponse) {
+       option (plugin_option) = "custom_value";
+     }
+   }
+   ```
+
+### 10. **方法优先级**
+
+* **用途**: 为 RPC 方法配置优先级，便于在任务调度或资源分配中处理。
+* **示例**: 标记方法的优先级（如 `HIGH`, `MEDIUM`, `LOW`）。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string priority = 50010;
+   }
+
+   service MyService {
+     rpc HighPriorityMethod(HighPriorityRequest) returns (HighPriorityResponse) {
+       option (priority) = "HIGH";
+     }
+   }
+   ```
+
+### 11. **方法跨平台兼容性**
+
+* **用途**: 为 RPC 方法配置跨平台兼容性选项。
+* **示例**: 标记方法在特定平台上的行为。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string platform_specific = 50011;
+   }
+
+   service MyService {
+     rpc PlatformMethod(PlatformRequest) returns (PlatformResponse) {
+       option (platform_specific) = "windows";
+     }
+   }
+   ```
+
+### 12. **方法生命周期管理**
+
+* **用途**: 为 RPC 方法配置生命周期状态，如是否已弃用。
+* **示例**: 标记方法的状态（如 `ACTIVE`, `DEPRECATED`, `REMOVED`）。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     string lifecycle_status = 50012;
+   }
+
+   service MyService {
+     rpc DeprecatedMethod(DeprecatedRequest) returns (DeprecatedResponse) {
+       option (lifecycle_status) = "DEPRECATED";
+     }
+   }
+   ```
+
+### 13. **方法流量控制**
+
+* **用途**: 为 RPC 方法配置流量控制策略，如限流或速率限制。
+* **示例**: 标记方法的速率限制（如每秒请求数）。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     int32 rate_limit = 50013;
+   }
+
+   service MyService {
+     rpc RateLimitedMethod(RateLimitedRequest) returns (RateLimitedResponse) {
+       option (rate_limit) = 100; // 100 requests per second
+     }
+   }
+   ```
+
+### 14. **方法监控配置**
+
+* **用途**: 为 RPC 方法配置监控选项，如是否启用性能监控。
+* **示例**: 标记方法是否启用性能监控。
+
+   ```protobuf
+   extend google.protobuf.MethodOptions {
+     bool enable_performance_monitoring = 50014;
+   }
+
+   service MyService {
+     rpc MonitoredMethod(MonitoredRequest) returns (MonitoredResponse) {
+       option (enable_performance_monitoring) = true;
+     }
+   }
+   ```
+
+### 总结
+
+`MethodOptions` 的自定义选项为 Protobuf 的 RPC 方法提供了强大的扩展能力，能够满足各种复杂的应用场景。通过合理使用这些选项，可以增强方法的元数据管理、行为控制、跨平台兼容性以及与其他系统的集成能力。这些选项在微服务架构、API 管理和分布式系统中尤其有用。
