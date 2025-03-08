@@ -2,7 +2,7 @@
 # stringer
 ---
 
-### 官方自动生成string
+# 官方自动生成string
 
 * main.go内容
 
