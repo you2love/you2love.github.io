@@ -1,6 +1,6 @@
 # Scrcpy
 
-Scrcpy 是一款高效、开源的 Android 屏幕镜像及控制工具，其技术原理涉及多个层面的协作，以下是其核心机制的分步解析：
+[Scrcpy] (<https://github.com/Genymobile/scrcpy)是一款高效、开源的> Android 屏幕镜像及控制工具，其技术原理涉及多个层面的协作，以下是其核心机制的分步解析：
 
 ---
 
