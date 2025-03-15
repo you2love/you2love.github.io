@@ -82,3 +82,7 @@ services:
       - $PWD/filebrowser:/srv # 设置你的文件目录
       - $PWD/filebrowser.db:/database # 设置你的数据库目录
 ```
+
+Stirling-PDF 多功能PDF处理工具（<https://www.stirlingpdf.com/）（https://github.com/Stirling-Tools/Stirling-PDF）>
+功能：支持PDF合并、分割、加密/解密、OCR识别等操作，适用于文档自动化处理场景5。
+优势：完全开源，无需依赖第三方API，保障数据隐私
