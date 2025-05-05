@@ -756,3 +756,174 @@ spec:
   - 支持多云和混合云环境。
 
 通过 Service，Kubernetes 实现了应用网络的抽象化，使开发者无需关注底层 Pod 的细节，专注于业务逻辑的实现。
+
+Kubernetes 中的 **Ingress** 用于管理外部访问集群内部服务的 **HTTP/HTTPS 流量**，充当集群的“智能路由网关”。它通过定义路由规则，将外部请求按域名、路径等条件分发到不同的后端服务，同时支持 TLS 加密等高级功能。以下是其核心作用及与外部流量的交互机制：
+
+---
+
+### **一、Ingress 的核心作用**
+
+#### **1. 统一流量入口**
+
+- **替代多个 LoadBalancer**  
+  无需为每个服务创建独立的负载均衡器（节省云资源成本），通过单一入口（如一个公网 IP）承载多个服务的流量。
+- **示例**：  
+  通过 `api.example.com` 和 `app.example.com` 两个域名访问同一个集群的不同服务。
+
+#### **2. 灵活的路由规则**
+
+- **基于域名（Host）路由**  
+  将不同域名的请求分发到对应的服务（如 `blog.example.com` → 博客服务，`api.example.com` → API 服务）。
+- **基于路径（Path）路由**  
+  同一域名下，按 URL 路径分发流量（如 `example.com/user` → 用户服务，`example.com/order` → 订单服务）。
+
+#### **3. TLS 终止**
+
+- **集中管理 HTTPS**  
+  在 Ingress 层统一配置 SSL/TLS 证书，实现 HTTPS 加密访问，无需在后端服务中单独处理加密。
+- **支持自动证书续签**  
+  结合工具如 `cert-manager` 可自动申请和更新 Let's Encrypt 证书。
+
+#### **4. 负载均衡与流量控制**
+
+- **权重分流**  
+  按比例将流量分配到不同版本的服务（如金丝雀发布）。
+- **会话保持、限流、重试**  
+  通过 Ingress 控制器扩展功能（如 Nginx 注解）。
+
+---
+
+### **二、Ingress 的工作原理**
+
+#### **1. 核心组件**
+
+- **Ingress 资源（API 对象）**  
+  声明路由规则（YAML 文件定义域名、路径、后端服务等）。
+- **Ingress 控制器（实际执行组件）**  
+  监控 Ingress 资源变化，动态配置负载均衡器或反向代理（如 Nginx、Traefik、AWS ALB）。
+
+#### **2. 工作流程**
+
+1. **部署 Ingress 控制器**  
+   安装如 Nginx Ingress Controller，它会自动创建一个 LoadBalancer 或 NodePort 类型的 Service，对外暴露入口。
+
+2. **创建 Ingress 规则**  
+   定义路由规则并关联后端 Service（ClusterIP 类型）。
+
+3. **外部流量进入**  
+   客户端通过 Ingress 控制器的外部 IP/DNS 发起请求。
+
+4. **规则匹配与转发**  
+   Ingress 控制器根据请求的域名和路径，将流量转发到对应的 Service，再由 Service 路由到 Pod。
+
+![Ingress 流量示意图](https://d33wubrfki0l68.cloudfront.net/91ace2ec-843e-4b3d-acf4-5f5d5d3f77e5/859c663-01-ingress.svg)
+
+---
+
+### **三、Ingress 与外部流量的交互**
+
+#### **1. 暴露 Ingress 控制器**
+
+- **云环境（如 AWS/GCP）**  
+  Ingress 控制器通常以 `LoadBalancer` 类型部署，云平台自动为其分配公网 IP。
+- **本地环境**  
+  使用 `NodePort` 或 `hostNetwork` 模式，通过节点 IP 和端口访问。
+
+#### **2. DNS 配置**
+
+- 将域名解析指向 Ingress 控制器的公网 IP（如 `A 记录` 或 `CNAME`）。
+
+#### **3. 示例：完整请求路径**
+
+1. 用户访问 `https://app.example.com`。
+2. DNS 解析到 Ingress 控制器的公网 IP。
+3. Ingress 控制器验证 TLS 证书并解密 HTTPS 流量。
+4. 根据 `Host: app.example.com` 匹配 Ingress 规则，将请求转发到对应的 Service（如 `app-service:80`）。
+5. Service 负载均衡到后端 Pod。
+
+---
+
+### **四、Ingress 配置示例**
+
+#### **1. 定义 Ingress 规则**
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /  # Nginx 特定注解（路径重写）
+spec:
+  tls:
+  - hosts:
+      - app.example.com
+    secretName: tls-secret  # 引用存储证书的 Secret
+  rules:
+  - host: app.example.com
+    http:
+      paths:
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: api-service  # 关联的后端 Service 名称
+            port:
+              number: 80
+      - path: /static
+        backend:
+          service:
+            name: static-service
+            port:
+              number: 80
+```
+
+#### **2. 创建 TLS 证书 Secret**
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: tls-secret
+type: kubernetes.io/tls
+data:
+  tls.crt: <base64 编码的证书>
+  tls.key: <base64 编码的私钥>
+```
+
+---
+
+### **五、常见 Ingress 控制器**
+
+| 控制器                | 特点                                                                 |
+|-----------------------|--------------------------------------------------------------------|
+| **Nginx Ingress**     | 最常用，功能丰富，支持注解扩展（限流、重写等）。                         |
+| **Traefik**           | 原生支持 Let's Encrypt，适合动态配置环境。                              |
+| **AWS ALB Ingress**   | 直接集成 AWS ALB，适合云原生环境。                                     |
+| **HAProxy Ingress**   | 高性能，适合需要极致吞吐量的场景。                                      |
+
+---
+
+### **六、Ingress vs. Service LoadBalancer**
+
+| **特性**          | **Ingress**                          | **Service (LoadBalancer)**          |
+|--------------------|--------------------------------------|-------------------------------------|
+| **协议支持**       | HTTP/HTTPS                          | 任意 TCP/UDP                        |
+| **路由粒度**       | 基于域名/路径                        | 仅端口级别                          |
+| **成本效率**       | 单一入口承载多服务（节省公网 IP 和 LB） | 每个服务需独立 LB（成本高）           |
+| **适用场景**       | 对外暴露 Web 服务                    | 非 HTTP 服务或需直接暴露 TCP 的场景   |
+
+---
+
+### **七、总结**
+
+- **Ingress 的核心价值**：  
+  ✅ 统一管理 HTTP/HTTPS 流量入口  
+  ✅ 灵活的路由规则与 TLS 集中管理  
+  ✅ 节省云资源成本  
+- **使用场景**：  
+  - 需要对外暴露多个 Web 服务（如微服务架构）。  
+  - 实现灰度发布、A/B 测试等高级流量控制。  
+  - 统一 HTTPS 证书管理。  
+
+通过 Ingress，Kubernetes 能够以声明式的方式高效管理外部流量，是现代云原生应用不可或缺的组件。
