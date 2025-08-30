@@ -18,7 +18,5 @@ if [ ${host} == "linux" ]; then
     git reset --hard
     git pull
     mdbook build
-    cp -r baidu_verify_codeva-5WexnefSpS.html book/
-    cp -r BingSiteAuth.xml book/
     cp -r book/* /usr/share/nginx/book/
 fi

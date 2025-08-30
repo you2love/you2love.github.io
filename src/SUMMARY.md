@@ -3,9 +3,13 @@
 - [web](web.md)
 - [mac](mac.md)
 
+-----
+
 - [docker](docker/docker.md)
 
   - [python](docker/python.md)
+
+-----
 
 - [nginx](nginx/index.md)
 
@@ -16,6 +20,8 @@
   - [常用技巧](nginx/use.md)
 
   - [rtmp](nginx/rtmp.md)
+
+-----
 
 - [golang](golang/golang.md)
 
@@ -53,6 +59,8 @@
 
   - [stringer](golang/stringer.md)
 
+-----
+
 - [python](python/python.md)
 
   - [fabric](python/fabric.md)
@@ -81,6 +89,8 @@
 
   - [svg](python/svg.md)
 
+-----
+
 - [c++](c++/c++.md)
 
   - [lz78算法](c++/lz78.md)
@@ -89,11 +99,15 @@
 
   - [随机数生成](c++/random.md)
 
+-----
+
 ## 数据库
 
 - [memcached](memcached.md)
 - [redis](redis.md)
 - [mysql](mysql.md)
+
+-----
 
 ## 编程语言
 
@@ -105,6 +119,8 @@
 
   - [ET框架](unity/et.md)
 
+-----
+
 ## 软件工具
 
 - [git](git.md)
@@ -112,6 +128,7 @@
 - [brew-酿制](brew.md)
 - [gogs-代码托管](gogs.md)
 - [mermaid-美人鱼](mermaid.md)
+- [dot-图形语言](dot.md)
 - [shell](shell.md)
 - [wireshark](wireshark.md)
 - [windows](windows.md)
@@ -129,6 +146,8 @@
 - [hugo](hugo.md)
 - [svn](svn.md)
 
+-----
+
 ## 杂记
 
 - [重要](important.md)
@@ -139,6 +158,8 @@
 - [机器学习](machinelearn.md)
 - [ai](ai.md)
 - [wasm](wasm.md)
+
+-----
 
 ## 大厂
 

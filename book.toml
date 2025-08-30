@@ -1,5 +1,5 @@
 [book]
-authors = ["资深码农"]
+authors = ["deep2code"]
 language = "zh"
 multilingual = false
 src = "src"
@@ -10,6 +10,16 @@ description = "记录技术积累"
 
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
+
+[preprocessor.graphviz]
+command = "mdbook-graphviz"
+output-to-file = false
+
+[preprocessor.graphviz.options]
+format = "svg"
+
+[preprocessor.plantuml]
+command = "mdbook-plantuml"
 
 [output]
 

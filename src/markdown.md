@@ -2,6 +2,8 @@
 # markdown
 ---
 
+:smile:
+
 ### [标准化语法](<https://commonmark.org/help/>)
 
 ![语法标记简介](webp/markdown/commonmark_example.webp)
@@ -27,7 +29,7 @@
 
 * &#x1F34E;
 
-* www.baidu.com
+* <www.baidu.com>
 
 * gitbook写书工具，有各种插件
 
