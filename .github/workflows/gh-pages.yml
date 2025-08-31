@@ -21,8 +21,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # 步骤1：拉取仓库代码
-      - name: Checkout Repository
+      - name: 拉取仓库代码
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 确保获取完整历史，可能对某些插件有帮助
@@ -30,24 +29,21 @@ jobs:
       - name: 安装系统依赖(graphviz)
         run: |
           sudo apt-get update
-          sudo apt-get install -y graphviz  # 安装 graphviz 工具
+          sudo apt-get install -y graphviz
 
-      # 使用官方Rust工具链动作，更可靠
-      - name: Install Rust and mdBook
+      - name: 官方Rust工具链
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
           profile: minimal
           override: true
 
-      # 缓存Rust依赖，加速构建
-      - name: Cache Rust dependencies
+      - name: 缓存Rust依赖,加速构建
         uses: Swatinem/rust-cache@v2
         with:
           prefix-key: ${{ runner.os }}-cargo
 
-      # 安装mdBook和插件
-      - name: Install mdBook and plugins
+      - name: 安装mdBook和插件
         run: |
           # 安装指定版本的mdBook
           cargo install mdbook
@@ -57,17 +53,14 @@ jobs:
           cargo install mdbook-toc
           cargo install mdbook-reading-time
 
-      # 构建静态网站
-      - name: Build Book
+      - name: 构建静态网站
         run: mdbook build
         continue-on-error: false # 构建失败则终止
 
-      # 步骤5：上传构建产物
-      - name: Upload Artifact
+      - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./book
 
-      # 步骤6：部署到GitHub Pages
-      - name: Deploy to GitHub Pages
+      - name: 部署到GitHub Pages
         uses: actions/deploy-pages@v3
