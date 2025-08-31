@@ -1,4 +1,5 @@
 # freetype
+<!-- toc --> 
 
 ```golang
 package main

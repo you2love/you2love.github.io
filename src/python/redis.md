@@ -1,4 +1,5 @@
 # redis示例
+<!-- toc --> 
 
 ```sh
 pip3 install redis

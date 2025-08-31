@@ -139,14 +139,15 @@ def insert_toc():
         if item.suffix != ".md":
             continue
 
-        with open("example.md", "r", encoding="utf-8") as f:
+        with open(item, "r", encoding="utf-8") as f:
             lines = f.readlines()
 
         # 在第二行（索引1）插入两个新行
-        lines.insert(1, "插入内容1\n")
-        lines.insert(2, "插入内容2\n")
+        lines.insert(1, "<!-- toc --> \n")
 
-        with open("example.md", "w", encoding="utf-8") as f:
+        # print("lines", lines[:4])
+
+        with open(item, "w", encoding="utf-8") as f:
             f.writelines(lines)
 
 

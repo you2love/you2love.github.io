@@ -1,9 +1,9 @@
 [book]
-authors = ["deep2code"]
+authors = ["you2love"]
 language = "zh"
 multilingual = false
 src = "src"
-title = "技术博客"
+title = "技术文档"
 description = "记录技术积累"
 
 [preprocessor]
@@ -17,9 +17,6 @@ output-to-file = false
 
 [preprocessor.graphviz.options]
 format = "svg"
-
-[preprocessor.plantuml]
-command = "mdbook-plantuml"
 
 [preprocessor.toc]
 command = "mdbook-toc"

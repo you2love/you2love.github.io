@@ -1,4 +1,5 @@
 # dot简介
+<!-- toc --> 
 
 - 需要mdbook-graphviz插件支持
 - 必须带上process参数,否则原样输出

@@ -1,0 +1,54 @@
+name: Deploy mdBook
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 步骤1：拉取仓库代码
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 配置Rust环境并安装指定版本mdBook
+      - name: Install Rust and mdBook
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf -y | 
+          sh rustup update
+          cargo install mdbook
+
+      # 安装扩展插件
+      - name: Install mdbook-mermaid
+        if: ${{ always() }}
+        run: cargo install mdbook-mermaid
+
+      # 安装扩展插件
+      - name: Install mdbook-graphviz
+        if: ${{ always() }}
+        run: cargo install mdbook-graphviz
+
+      # 安装扩展插件
+      - name: Install mdbook-toc
+        if: ${{ always() }}
+        run: cargo install mdbook-toc
+
+      # 构建静态网站
+      - name: Build Book
+        run: mdbook build
+
+      # 步骤5：上传构建产物
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./book
+
+      # 步骤6：部署到GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v3

@@ -1,4 +1,5 @@
 # paddleocr示例
+<!-- toc --> 
 
 ### [百度开源Paddle](https://www.paddlepaddle.org.cn/)
 

@@ -1,4 +1,5 @@
 # tesseract
+<!-- toc --> 
 
 ### 安装
 

@@ -1,4 +1,5 @@
 # go-git
+<!-- toc --> 
 
 ```golang
 
