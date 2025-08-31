@@ -1,7 +1,7 @@
 # Android
 <!-- toc --> 
 
-# 常见的root工具
+## 常见的root工具
 
 * [kingRoot](https://root-apk.kingoapp.com/)
 
