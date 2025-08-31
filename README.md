@@ -6,4 +6,5 @@ cargo install mdbook-pdf
 cargo install mdbook-mermaid
 cargo install mdbook-toc
 cargo install mdbook-graphviz
+cargo install mdbook-reading-time
 ```
