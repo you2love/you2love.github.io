@@ -2,6 +2,10 @@ name: Deploy mdBook
 on:
   push:
     branches: [master]
+    paths:
+      - "src/**"
+      - "book.toml"
+      - ".github/workflows/deploy-mdbook.yml"
   workflow_dispatch:
 
 permissions:
@@ -12,36 +16,45 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       # 步骤1：拉取仓库代码
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 确保获取完整历史，可能对某些插件有帮助
 
-      # 配置Rust环境并安装指定版本mdBook
+      # 使用官方Rust工具链动作，更可靠
       - name: Install Rust and mdBook
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+
+      # 缓存Rust依赖，加速构建
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+        with:
+          prefix-key: ${{ runner.os }}-cargo
+
+      # 安装mdBook和插件
+      - name: Install mdBook and plugins
         run: |
-          curl --proto '=https' --tlsv1.2 -sSf -y | 
-          sh rustup update
+          # 安装指定版本的mdBook
           cargo install mdbook
-
-      # 安装扩展插件
-      - name: Install mdbook-mermaid
-        if: ${{ always() }}
-        run: cargo install mdbook-mermaid
-
-      # 安装扩展插件
-      - name: Install mdbook-graphviz
-        if: ${{ always() }}
-        run: cargo install mdbook-graphviz
-
-      # 安装扩展插件
-      - name: Install mdbook-toc
-        if: ${{ always() }}
-        run: cargo install mdbook-toc
+          # 安装插件
+          cargo install mdbook-mermaid
+          cargo install mdbook-graphviz
+          cargo install mdbook-toc
 
       # 构建静态网站
       - name: Build Book
         run: mdbook build
+        continue-on-error: false # 构建失败则终止
 
       # 步骤5：上传构建产物
       - name: Upload Artifact
