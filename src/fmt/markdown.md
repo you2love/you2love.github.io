@@ -1,8 +1,4 @@
----
 # markdown
----
-
-:smile:
 
 ### [标准化语法](<https://commonmark.org/help/>)
 
@@ -23,7 +19,14 @@
 
 ---
 
+
 ### 笔记
+
+* emoji表情符号
+
+```markdown
+ :smile:
+```
 
 * ~~+1~~
 

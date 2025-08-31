@@ -1,6 +1,4 @@
----
 # stringer
----
 
 # 官方自动生成string
 

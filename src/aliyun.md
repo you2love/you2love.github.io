@@ -1,6 +1,4 @@
----
 # 阿里云
----
 
 ### [开源mirror网址](https://developer.aliyun.com/mirror/)
 

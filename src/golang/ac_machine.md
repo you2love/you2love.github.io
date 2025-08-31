@@ -1,4 +1,6 @@
-# ahocorasick,快速在输出文本中查找有没有出现字典中文本
+# ac_machine
+
+## ahocorasick算法,快速在输出文本中查找有没有出现字典中文本
 
 ```golang
 package main

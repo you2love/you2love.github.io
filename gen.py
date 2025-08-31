@@ -128,19 +128,31 @@ def summary():
         summary_file.writelines(line_list)
 
 
-def re_start():
-    import re
+def insert_toc():
+    from pathlib import Path
 
-    net_re = re.compile(r"(.*?)(?=\.daodao\.pro)")
-    mt = net_re.match("http://pre-oms.daodao.pro")
-    print("mt", mt.group(0), mt.group(1), mt.groups())
-    for result in net_re.findall("http://pre-oms.daodao.pro"):
-        print(result)
+    path = Path("src")
+    for item in path.rglob("*"):
+        if not item.is_file():
+            continue
+
+        if item.suffix != ".md":
+            continue
+
+        with open("example.md", "r", encoding="utf-8") as f:
+            lines = f.readlines()
+
+        # 在第二行（索引1）插入两个新行
+        lines.insert(1, "插入内容1\n")
+        lines.insert(2, "插入内容2\n")
+
+        with open("example.md", "w", encoding="utf-8") as f:
+            f.writelines(lines)
 
 
 if __name__ == "__main__":
     pass
-    re_start()
+    insert_toc()
     # from_blog(only_md=True)
     # change_webp()
     # change_title()

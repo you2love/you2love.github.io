@@ -1,4 +1,6 @@
-# 换位法生成全排列
+# perm
+
+## 换位法生成全排列
 
 ```c++
 #include <iostream>

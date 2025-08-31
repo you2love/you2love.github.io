@@ -101,17 +101,27 @@
 
 -----
 
+## 文件格式
+
+- [yaml](fmt/yaml.md)
+- [toml](fmt/toml.md)
+- [markdown](fmt/markdown.md)
+- [pdf](fmt/pdf.md)
+- [mermaid-文本画图](fmt/mermaid.md)
+- [dot-图形语言](fmt/dot.md)
+- [makefile](soft/makefile.md)
+
+-----
+
 ## 数据库
 
-- [memcached](memcached.md)
-- [redis](redis.md)
-- [mysql](mysql.md)
+- [memcached](db/memcached.md)
+- [redis](db/redis.md)
+- [mysql](db/mysql.md)
 
 -----
 
 ## 编程语言
-
-- [markdown](markdown.md)
 
 - [rust](rust.md)
 
@@ -123,28 +133,25 @@
 
 ## 软件工具
 
-- [git](git.md)
-- [grpc](grpc.md)
-- [brew-酿制](brew.md)
-- [gogs-代码托管](gogs.md)
-- [mermaid-美人鱼](mermaid.md)
-- [dot-图形语言](dot.md)
-- [shell](shell.md)
-- [wireshark](wireshark.md)
-- [windows](windows.md)
-- [elastic](elastic.md)
-- [jenkins](jenkins.md)
-- [vim](vim.md)
-- [makefile](makefile.md)
-- [github](github.md)
-- [firefox](firefox.md)
-- [flutter](flutter.md)
-- [tesseract](tesseract.md)
-- [harbor](harbor.md)
-- [gitlab](gitlab.md)
+- [git](soft/git.md)
+- [grpc](soft/grpc.md)
+- [brew-酿制](soft/brew.md)
+- [gogs-代码托管](soft/gogs.md)
+- [shell](soft/shell.md)
+- [wireshark](soft/wireshark.md)
+- [windows](soft/windows.md)
+- [elastic](soft/elastic.md)
+- [jenkins](soft/jenkins.md)
+- [vim](soft/vim.md)
+- [github](soft/github.md)
+- [firefox](soft/firefox.md)
+- [flutter](soft/flutter.md)
+- [tesseract](soft/tesseract.md)
+- [harbor](soft/harbor.md)
+- [gitlab](soft/gitlab.md)
 - [地理编码](geocode.md)
-- [hugo](hugo.md)
-- [svn](svn.md)
+- [hugo](soft/hugo.md)
+- [svn](soft/svn.md)
 
 -----
 

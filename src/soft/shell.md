@@ -1,6 +1,4 @@
----
 # shell
----
 
 ## man中文手册(<https://github.com/man-pages-zh/manpages-zh>)
 

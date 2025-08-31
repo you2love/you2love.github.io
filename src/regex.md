@@ -1,6 +1,4 @@
----
-# regix
----
+# regex
 
 ### 常用的vscode
 

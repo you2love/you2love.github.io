@@ -21,6 +21,10 @@ format = "svg"
 [preprocessor.plantuml]
 command = "mdbook-plantuml"
 
+[preprocessor.toc]
+command = "mdbook-toc"
+max-level = 3
+
 [output]
 
 [output.html]

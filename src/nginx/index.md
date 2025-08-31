@@ -1,6 +1,4 @@
----
 # nginx
----
 
 ### [Nginx-中国开源社区](https://www.nginx.org.cn)
 

@@ -1,6 +1,4 @@
----
 # rtmp
----
 
 ### [下载安装rtmp模块](https://github.com/arut/nginx-rtmp-module)
 

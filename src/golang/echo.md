@@ -1,6 +1,4 @@
----
 # echo
----
 
 ### memcached中间件
 

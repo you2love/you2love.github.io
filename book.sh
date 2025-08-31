@@ -4,6 +4,7 @@ set -x
 # mac
 if [ "$(uname)" == "Darwin" ]; then
     host=""mac""
+    mdbook linkcheck
 # GNU/Linux操作系统
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     git pull

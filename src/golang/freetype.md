@@ -1,6 +1,4 @@
----
 # freetype
----
 
 ```golang
 package main

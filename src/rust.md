@@ -1,8 +1,6 @@
----
 # Rust
----
 
-# [官网](https://www.rust-lang.org/)
+## [官网](https://www.rust-lang.org/)
 
 ```sh
 Rustup metadata and toolchains will be installed into the Rustup

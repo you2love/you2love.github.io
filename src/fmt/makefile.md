@@ -1,8 +1,6 @@
----
 # makefile
----
 
-### 常见编译变量参数
+## 常见编译变量参数
 
 ```bash
 SHELL := /usr/bin/env bash -o pipefail
@@ -15,7 +13,7 @@ BUILD_HOST ?= $(shell hostname)
 BUILD_USER ?= $(shell id -un)
 ```
 
-### 变量不同赋值区别
+## 变量不同赋值区别
 
 ```bash
 = 是最基本的赋值
@@ -24,10 +22,10 @@ BUILD_USER ?= $(shell id -un)
 += 是添加等号后面的值
 ```
 
-### 生成makefile的cmakelist介绍
+## 生成makefile的cmakelist介绍
 
 ![cmakelist](/webp/makefile/cmakelist.webp)
 
-### makelist介绍
+## makelist介绍
 
 ![intro](/webp/makefile/intro.webp)

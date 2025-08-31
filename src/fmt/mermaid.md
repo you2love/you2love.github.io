@@ -1,6 +1,4 @@
----
 # [mermaid-美人鱼](https://mermaid-js.github.io/mermaid/)示例
----
 
 ### Flowchart
 

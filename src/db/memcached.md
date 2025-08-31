@@ -1,6 +1,4 @@
----
 # memcached
----
 
 ## [官方文档](https://github.com/memcached/memcached/wiki/)
 
