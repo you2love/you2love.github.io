@@ -1,9 +1,5 @@
----
+# linux
 <!-- toc --> 
-# linux
----
-
-# linux
 
 ## 文件挂载
 
