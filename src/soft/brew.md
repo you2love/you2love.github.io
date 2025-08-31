@@ -3,7 +3,7 @@
 
 ### [官网](https://brew.sh/)
 
-![brew_logo](webp/brew/brew_logo.webp  "brew_logo")
+![brew_logo](../webp/brew/brew_logo.webp  "brew_logo")
 
 * Homebrew 类似于一个软件中心，你可以理解成 App Store 或者 Google Play 那样的软件商店，只不过，Homebrew 比前者以及 Mac App Store 来说有着更丰富的资源与更高效的管理。
 * Homebrew Cask，它是一套建立在 Homebrew 基础之上的 OS X 软件安装命令行工具，是 Homebrew 的扩展.

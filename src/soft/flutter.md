@@ -128,9 +128,9 @@ cd git-code/github/flutter-website
 
 * [xcode真机安装ipa](https://www.jianshu.com/p/19ed6b2ea8a1)
 
-![第一步](webp/flutter/xcode_ipa_1.webp)
+![第一步](../webp/flutter/xcode_ipa_1.webp)
 
-![第二步](webp/flutter/xcode_ipa_2.webp)
+![第二步](../webp/flutter/xcode_ipa_2.webp)
 
 Flutter 是一个强大的 UI 框架，提供了丰富的 **Widget** 来构建应用程序。以下是 Flutter 的基础、重点和常用 Widget 的分类和说明，以及它们之间的关系图。
 

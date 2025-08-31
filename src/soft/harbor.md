@@ -13,8 +13,8 @@
 
 * linux至少4核/8G
 
-![harbor组件图](webp/harbor/harbor-1.webp)
-![harbor说明](webp/harbor/harbor-2.webp)
+![harbor组件图](../webp/harbor/harbor-1.webp)
+![harbor说明](../webp/harbor/harbor-2.webp)
 
 ```bash
 # 下载离线安装包

@@ -11,8 +11,8 @@
 * [grpc-gateway-http转grpc](https://github.com/grpc-ecosystem/grpc-gateway)
 * [swagger.json-根据api接口client](https://github.com/swagger-api/swagger-codegen)
 * [buf-强化pb生成](https://docs.buf.build/)
-* ![图示原理-2](webp/grpc/proto-1.webp)
-* ![图示原理-2](webp/grpc/proto-2.webp)
+* ![图示原理-2](../webp/grpc/proto-1.webp)
+* ![图示原理-2](../webp/grpc/proto-2.webp)
 * [rk-golang微服务框架](https://www.rkdev.info/)
 * [grpc-swift语言实现](https://github.com/grpc/grpc-swift)
 * [capnp-更快的protobuf](https://capnproto.org)
@@ -201,9 +201,9 @@ message Order {
 ### 数据类型
 
 ***
-![类型1](webp/grpc/protobuf_type1.webp)
-![类型2](webp/grpc/protobuf_type2.webp)
-![默认值](webp/grpc/protobuf_default.webp)
+![类型1](../webp/grpc/protobuf_type1.webp)
+![类型2](../webp/grpc/protobuf_type2.webp)
+![默认值](../webp/grpc/protobuf_default.webp)
 
 ### golang专用
 

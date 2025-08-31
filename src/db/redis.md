@@ -72,7 +72,7 @@ active-defrag-cycle-max 25
 ***
 
 >Redis对消息队列（MQ，Message Queue）的完善实现
-![redis_stream](webp/redis/redis_stream.webp)
+![redis_stream](../webp/redis/redis_stream.webp)
 
 ### redis6增加了多线程
 
@@ -105,14 +105,14 @@ active-defrag-cycle-max 25
 | Auth | auth password | 验证密码 |
 | HyperLogLog | pfadd,pfcount | 基数估计 |
 
-![string](webp/redis/redis_string.webp)
-![list](webp/redis/redis_list.webp)
-![hash](webp/redis/redis_hash.webp)
-![set](webp/redis/redis_set.webp)
-![sortedSet](webp/redis/redis_sortedSet.webp)
-![pub/sub](webp/redis/redis_pubsub.webp)
-![key](webp/redis/redis_key.webp)
-![hl](webp/redis/redis_hl.webp)
+![string](../webp/redis/redis_string.webp)
+![list](../webp/redis/redis_list.webp)
+![hash](../webp/redis/redis_hash.webp)
+![set](../webp/redis/redis_set.webp)
+![sortedSet](../webp/redis/redis_sortedSet.webp)
+![pub/sub](../webp/redis/redis_pubsub.webp)
+![key](../webp/redis/redis_key.webp)
+![hl](../webp/redis/redis_hl.webp)
 
 * xreadgroup和xack配合使用
 

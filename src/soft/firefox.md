@@ -29,12 +29,12 @@
 
 * 开发者模式-禁止网页跳转自动清除日志
   * 禁止页面跳过自动清除log
-  ![firefox-log](webp/firefox/firefox-log.webp  "firefox-log")
-  ![chrome-log](webp/firefox/chrome-log.webp  "chrome-log")
+  ![firefox-log](../webp/firefox/firefox-log.webp  "firefox-log")
+  ![chrome-log](../webp/firefox/chrome-log.webp  "chrome-log")
 
 * lighthouse-chrome出品网站优化建议报告,dev-tools自带，方便又快捷
-  * ![lighthouse-start](webp/firefox/lighthouse-start.webp  "lighthouse-start")
-  * ![lighthouse-report](webp/firefox/lighthouse-report.webp  "lighthouse-report")
+  * ![lighthouse-start](../webp/firefox/lighthouse-start.webp  "lighthouse-start")
+  * ![lighthouse-report](../webp/firefox/lighthouse-report.webp  "lighthouse-report")
 
 * firefox开发者专用版,获取最新的开发者工具,帮助调试很多问题
 

@@ -85,7 +85,7 @@ wait
 * systemd是一个服务管理器,它使管理服务器变得更加容易。
 * 对于支持 systemd 的软件，安装的时候，它会自动的在 /usr/lib/systemd/system 目录添加一个配置文件
 * /lib -> /usr/lib 通常路径被软链接
-![link](webp/shell/link.webp)
+![link](../webp/shell/link.webp)
 
 ### curl带用户名密码的pos提交
 
@@ -428,7 +428,7 @@ sudo timedatectl set-timezone Asia/Shanghai
 sudo lshw -numeric -C display显示显卡信息，lspci | grep -i vga
 ```
 
-![vga](webp/shell/vga.webp)
+![vga](../webp/shell/vga.webp)
 
 ### 权限错误
 

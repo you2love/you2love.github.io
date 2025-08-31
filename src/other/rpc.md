@@ -6,7 +6,7 @@
 
 ***
 
-![rpc](webp/rpc/rpc.webp)
+![rpc](../webp/rpc/rpc.webp)
 
 ```mermaid
 
@@ -35,12 +35,12 @@ sequenceDiagram
 
 ***
 
-* ![google出品-grpc](gwebp/rpc/rpc.webp)
+* ![google出品-grpc](../webp/rpc/rpc.webp)
 
-* ![腾讯出品-tars](webp/rpc/tars.webp)
+* ![腾讯出品-tars](../webp/rpc/tars.webp)
 
-* ![baidu出品-grpc](bwebp/rpc/rpc.webp)
+* ![baidu出品-grpc](../webp/rpc/rpc.webp)
 
-* ![golang语言专用](webp/rpc/rpcx.webp)
+* ![golang语言专用](../webp/rpc/rpcx.webp)
 
 * grpcurl 类似curl,但用于grpc

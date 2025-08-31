@@ -14,11 +14,11 @@
 
 ### python机器学习包介绍
 
-![python_package图](webp/machinelearn/python_package.webp  "python_package图")
+![python_package图](../webp/machinelearn/python_package.webp  "python_package图")
 
 ### 矩阵乘法
 
-![矩阵乘法图](webp/machinelearn/matrix_multi.webp  "矩阵乘法图")
+![矩阵乘法图](../webp/machinelearn/matrix_multi.webp  "矩阵乘法图")
 
 ### 深度学习中图像为什么要归一化？
 

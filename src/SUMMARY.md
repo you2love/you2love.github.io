@@ -101,23 +101,23 @@
 
 -----
 
-## 文件格式
+- [常见文件](fmt/fmt.md)
 
-- [yaml](fmt/yaml.md)
-- [toml](fmt/toml.md)
-- [markdown](fmt/markdown.md)
-- [pdf](fmt/pdf.md)
-- [mermaid-文本画图](fmt/mermaid.md)
-- [dot-图形语言](fmt/dot.md)
-- [makefile](soft/makefile.md)
+  - [yaml](fmt/yaml.md)
+  - [toml](fmt/toml.md)
+  - [markdown](fmt/markdown.md)
+  - [pdf](fmt/pdf.md)
+  - [mermaid](fmt/mermaid.md)
+  - [dot](fmt/dot.md)
+  - [dox](fmt/docx.md)
 
 -----
 
-## 数据库
+- [数据库](db/db.md)
 
-- [memcached](db/memcached.md)
-- [redis](db/redis.md)
-- [mysql](db/mysql.md)
+  - [memcached](db/memcached.md)
+  - [redis](db/redis.md)
+  - [mysql](db/mysql.md)
 
 -----
 
@@ -131,45 +131,47 @@
 
 -----
 
-## 软件工具
+- [soft](soft/soft.md)
 
-- [git](soft/git.md)
-- [grpc](soft/grpc.md)
-- [brew-酿制](soft/brew.md)
-- [gogs-代码托管](soft/gogs.md)
-- [shell](soft/shell.md)
-- [wireshark](soft/wireshark.md)
-- [windows](soft/windows.md)
-- [elastic](soft/elastic.md)
-- [jenkins](soft/jenkins.md)
-- [vim](soft/vim.md)
-- [github](soft/github.md)
-- [firefox](soft/firefox.md)
-- [flutter](soft/flutter.md)
-- [tesseract](soft/tesseract.md)
-- [harbor](soft/harbor.md)
-- [gitlab](soft/gitlab.md)
-- [地理编码](geocode.md)
-- [hugo](soft/hugo.md)
-- [svn](soft/svn.md)
-
------
-
-## 杂记
-
-- [重要](important.md)
-- [rpc](rpc.md)
-- [搜索技巧](search.md)
-- [杂项](other.md)
-- [优秀开源软件](opensource.md)
-- [机器学习](machinelearn.md)
-- [ai](ai.md)
-- [wasm](wasm.md)
+  - [git](soft/git.md)
+  - [brew](soft/brew.md)
+  - [k8s](soft/k8s.md)
+  - [grpc](soft/grpc.md)
+  - [gogs](soft/gogs.md)
+  - [shell](soft/shell.md)
+  - [wireshark](soft/wireshark.md)
+  - [windows](soft/windows.md)
+  - [elastic](soft/elastic.md)
+  - [makefile](soft/makefile.md)
+  - [jenkins](soft/jenkins.md)
+  - [vim](soft/vim.md)
+  - [github](soft/github.md)
+  - [firefox](soft/firefox.md)
+  - [flutter](soft/flutter.md)
+  - [tesseract](soft/tesseract.md)
+  - [harbor](soft/harbor.md)
+  - [gitlab](soft/gitlab.md)
+  - [hugo](soft/hugo.md)
+  - [svn](soft/svn.md)
 
 -----
 
-## 大厂
+- [other](other/other.md)
 
-- [阿里云](aliyun.md)
-
-- [腾讯](tencent.md)
+  - [重要](other/important.md)
+  - [rpc](other/rpc.md)
+  - [搜索技巧](other/search.md)
+  - [u盘](other/u.md)
+  - [磁盘](other/disk.md)
+  - [css](other/css.md)
+  - [phone](other/phone.md)
+  - [ddns](other/ddns.md)
+  - [ebpf](other/ebpf.md)
+  - [i2p](other/i2p.md)
+  - [地理编码](other/geocode.md)
+  - [优秀开源软件](other/opensource.md)
+  - [机器学习](other/machinelearn.md)
+  - [ai](other/ai.md)
+  - [wasm](other/wasm.md)
+  - [阿里云](other/aliyun.md)
+  - [腾讯](other/tencent.md)

@@ -28,7 +28,7 @@ Repo --restore或reset或checkout--> Staged
 
 ```
 
-![git_lint](webp/git/git_lint.webp)
+![git_lint](../webp/git/git_lint.webp)
 
 ```mermaid
 sequenceDiagram
@@ -258,7 +258,7 @@ git commit -am "three"
 git rebase -i head~3
 ```
 
-![git_rebase](webp/git/git_rebase_head.webp)
+![git_rebase](../webp/git/git_rebase_head.webp)
 
 ```bash
 git commit
@@ -490,10 +490,10 @@ git commit -am "newBranch"
 * Git钩子都被存储在 Git 目录下的 hooks 子目录中.
 
 * .git目录内容
-![git_dir](webp/git/git_dir.webp)
+![git_dir](../webp/git/git_dir.webp)
 
 * git引用
-![git_refs](webp/git/git_refs.webp)
+![git_refs](../webp/git/git_refs.webp)
 
 * 查看项目本地仓库,远程仓库,标签等
 

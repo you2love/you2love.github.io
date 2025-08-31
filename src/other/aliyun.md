@@ -5,7 +5,7 @@
 
 ***
 
-![截图](webp/aliyun/aliyun_mirror.webp "aliyun_mirror")
+![截图](../webp/aliyun/aliyun_mirror.webp "aliyun_mirror")
 
 ### [阿里云专有网络](https://help.aliyun.com/document_detail/100380.html)
 
@@ -15,20 +15,20 @@
 * 云资源不可以直接部署在专有网络中，必须属于专有网络内的一个交换机（子网）内.
 * 目前专有网络必须手动开启ipv6功能
 
-![vpc](webp/aliyun/aliyun_vpc.webp)
+![vpc](../webp/aliyun/aliyun_vpc.webp)
 
-![route](webp/aliyun/aliyun_route.webp)
+![route](../webp/aliyun/aliyun_route.webp)
 
 ### 阿里云支持ipv6
 
-![aliyun_dns](webp/aliyun/aliyun_dns.webp)
-![aliyun_ipv6_ipv4](webp/aliyun/aliyun_ipv6_ipv4.webp)
-![aliyun_ipv6_slb](webp/aliyun/aliyun_ipv6_slb.webp)
-![aliyun_ipv6](webp/aliyun/aliyun_ipv6.webp)
+![aliyun_dns](../webp/aliyun/aliyun_dns.webp)
+![aliyun_ipv6_ipv4](../webp/aliyun/aliyun_ipv6_ipv4.webp)
+![aliyun_ipv6_slb](../webp/aliyun/aliyun_ipv6_slb.webp)
+![aliyun_ipv6](../webp/aliyun/aliyun_ipv6.webp)
 
 ### [阿里云ECS配置ipv6](https://help.aliyun.com/document_detail/108458.html)
 
-![aliyun_ecs_ipv6](aliyun_ecs_ipv6.web)
+![aliyun_ecs_ipv6](../webp/aliyun/aliyun_ecs_ipv6.webp)
 
 * VPC和ECS支持双栈后，ECS上会分配到IPv6地址，部署在ECS上的系统需要主动访问Internet的IPv6系统，这就需要配合IPv6网关使用
 * 开通IPv6网关后，通过配置IPv6网关规则，允许VPC内指定IPv6地址访问公网，则指定的IPv6 ECS就可以主动访问公网了

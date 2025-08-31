@@ -20,9 +20,9 @@ eBPF 程序附加到内核中的特定代码路径，例如系统调用。这些
 
 ## 图示
 
-![图片-1](webp/ebpf/eBPF-1.png)
-![图片-2](webp/ebpf/eBPF-2.png)
-![图片-3](webp/ebpf/eBPF-3.png)
+![图片-1](../webp/ebpf/eBPF-1.png)
+![图片-2](../webp/ebpf/eBPF-2.png)
+![图片-3](../webp/ebpf/eBPF-3.png)
 
 ## 应用示例
 

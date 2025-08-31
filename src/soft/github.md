@@ -21,7 +21,7 @@
 ***
 
 1. [ip address.com](https://www.ipaddress.com/)查域名
-![ip address](webp/github/ipaddress.webp)
+![ip address](../webp/github/ipaddress.webp)
 
 2. 修改/etc/hosts
 

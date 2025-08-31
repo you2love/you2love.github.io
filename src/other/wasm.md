@@ -10,8 +10,8 @@
 
 ### wasm-二进制标准格式，另一个"一次编译，到处执行"
 
-![浏览器中wasm](webp/was/wasm_brower.webp)
-![os中wasm](webp/was/wasm_os.webp)
-![解释器的wasm](webp/was/wasm_interpreter.webp)
-![docker版的wasm](webp/was/wasm_docker.webp)
-![wasm的进化史](webp/was/wasm_enter.webp)
+![浏览器中wasm](../webp/wasm/wasm_brower.webp)
+![os中wasm](../webp/wasm/wasm_os.webp)
+![解释器的wasm](../webp/wasm/wasm_interpreter.webp)
+![docker版的wasm](../webp/wasm/wasm_docker.webp)
+![wasm的进化史](../webp/wasm/wasm_enter.webp)

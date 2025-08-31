@@ -60,10 +60,10 @@ flowchart LR
 ***
 
 * github下载
-![下载](webp/other/darkreader_download.webp)
+![下载](../webp/other/darkreader_download.webp)
 
 * chromium安装
-![安装](webp/other/darkreader_chrome.webp)
+![安装](../webp/other/darkreader_chrome.webp)
 
 ### 写好博客/wiki有用参考
 
@@ -85,16 +85,16 @@ flowchart LR
 ***
 
 * [电脑安装华为手机助手](https://consumer.huawei.com/cn/support/hisuite/)
-![华为手机助手](webp/other/hisuite_download.webp)
+![华为手机助手](../webp/other/hisuite_download.webp)
 
 * 用数据线连接电脑和手机,手机开启HDB
-![开启hdb](webp/other/nova_hdb.webp)
+![开启hdb](../webp/other/nova_hdb.webp)
 
 * 下载VLC安装包
-![下载vlc](webp/other/vlc_download.webp)
+![下载vlc](../webp/other/vlc_download.webp)
 
 * 复制到手机
-![复制vlc](webp/other/vlc_copy.webp)
+![复制vlc](../webp/other/vlc_copy.webp)
 
 * 手机->实用工具->文件管理->浏览->下载与接收->下载管理器->点击apk
 
@@ -341,7 +341,7 @@ JSON Lines 是一种文本格式，适用于存储大量结构相似的嵌套数
 
 ### [理解socks5协议的工作过程和协议细节](https://wiyi.org/socks5-protocol-in-deep.html)
 
-![示意图](webp/other/socks5.webp)
+![示意图](../webp/other/socks5.webp)
 
 ### [全球ip地址查询](https://github.com/lionsoul2014/ip2region)
 
@@ -414,7 +414,7 @@ JSON Lines 是一种文本格式，适用于存储大量结构相似的嵌套数
 
 ### 常见usb接口
 
-![usb](webp/other/usb.webp)
+![usb](../webp/other/usb.webp)
 
 ### [阿里云智能插件,仅支持java](https://alibaba-cloud-toolkit.github.io/cosy/#/zh-cn/README)
 

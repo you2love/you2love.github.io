@@ -24,19 +24,19 @@ export SSLKEYLOGFILE=~/sslkeylog.log
 * 配置wireshark
 
   * 设置通讯密钥文件位置
-  ![masterkey_log](webp/wireshark/masterkey_log.webp)
+  ![masterkey_log](../webp/wireshark/masterkey_log.webp)
 
   * 设置显示域名,默认显ip
-  ![dns](webp/wireshark/dns.webp)
+  ![dns](../webp/wireshark/dns.webp)
 
 * firefox访问网址,wireshark抓包
-![catch](webp/wireshark/catch.webp)
+![catch](../webp/wireshark/catch.webp)
 
 ### 显示过滤语法
 
 ***
 
-![show_filter](webp/wireshark/show_filter.webp)
+![show_filter](../webp/wireshark/show_filter.webp)
 
 ```sh
 # 获取指定port包

@@ -649,7 +649,7 @@ select  GROUP_CONCAT(sch_name) from sch_basic_info sbi group by sch_id HAVING co
 ```
 
 * 支持opengis,geometry
-![opengis](webp/ysql/mysql_opengis.webp)
+![opengis](../webp/mysql/mysql_opengis.webp)
   * Geometry (noninstantiable)
   * Point (instantiable)
   * Curve (noninstantiable)

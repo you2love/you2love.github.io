@@ -5,7 +5,7 @@
 
 ***
 
-![软件logo](webp/memcached/memcache_logo.webp)
+![软件logo](../webp/memcached/memcache_logo.webp)
 
 ### 安装运行
 
@@ -63,7 +63,7 @@ command <key> <flags> <expiration time> <bytes>
     1. 确实不存在:用布隆过滤器优化
     2. 键超时:设置永不超时,受最大内存限制
 
-![示例图](webp/memcached/set_example.webp)
+![示例图](../webp/memcached/set_example.webp)
 
 | 命令 | 功能 |
 | :--: | :--: |
@@ -186,16 +186,16 @@ static int process_request(mcp_parser_t *pr, const char *command, size_t cmdlen)
 ***
 
  1. 多个节点,依赖代码库配合实现集群
-    ![集群图](webp/memcached/memcache_nodes.webp)
+    ![集群图](../webp/memcached/memcache_nodes.webp)
 
  2. 减少扩容缩小节点影响，代码算法优化
-    ![哈希图](webp/memcached/memcache_hash.webp)
+    ![哈希图](../webp/memcached/memcache_hash.webp)
 
 ### 内部结构
 
 ***
 
-![内部图](webp/memcached/memcache_slab.webp)
+![内部图](../webp/memcached/memcache_slab.webp)
 
 >*Slab Allocator解决了**内存碎片**,但由于分配的是特定长度的内存，因此**浪费内存***
 
