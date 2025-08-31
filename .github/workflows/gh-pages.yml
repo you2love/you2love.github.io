@@ -27,6 +27,11 @@ jobs:
         with:
           fetch-depth: 0 # 确保获取完整历史，可能对某些插件有帮助
 
+      - name: 安装系统依赖(graphviz)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y graphviz  # 安装 graphviz 工具
+
       # 使用官方Rust工具链动作，更可靠
       - name: Install Rust and mdBook
         uses: actions-rs/toolchain@v1
