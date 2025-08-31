@@ -5,7 +5,7 @@ on:
     paths:
       - "src/**"
       - "book.toml"
-      - ".github/workflows/deploy-mdbook.yml"
+      - ".github/workflows/gh-pages.yml"
   workflow_dispatch:
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
