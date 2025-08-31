@@ -55,6 +55,7 @@ jobs:
           cargo install mdbook-mermaid
           cargo install mdbook-graphviz
           cargo install mdbook-toc
+          cargo install mdbook-reading-time
 
       # 构建静态网站
       - name: Build Book
