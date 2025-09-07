@@ -113,6 +113,8 @@
   - [peg](fmt/peg.md)
   - [robots](fmt/robots.md)
   - [css](fmt/css.md)
+  - [cypher](fmt/cypher.md)
+  - [proto3](fmt/proto3.md)
 
 -----
 
