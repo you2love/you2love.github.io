@@ -110,6 +110,9 @@
   - [mermaid](fmt/mermaid.md)
   - [dot](fmt/dot.md)
   - [dox](fmt/docx.md)
+  - [peg](fmt/peg.md)
+  - [robots](fmt/robots.md)
+  - [css](fmt/css.md)
 
 -----
 
@@ -118,6 +121,7 @@
   - [memcached](db/memcached.md)
   - [redis](db/redis.md)
   - [mysql](db/mysql.md)
+  - [gql](db/gql.md)
 
 -----
 
