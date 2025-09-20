@@ -5,11 +5,12 @@
 
 * [awesome-宝库值得多看](https://github.com/avelino/awesome-go)
 * [各个领域优秀库-中文版](https://github.com/jobbole/awesome-go-cn)
-* [纯go实现全功能pdf库](https://github.com/pdfcpu/pdfcpu)
 * [lint-绝对需要](github.com/golangci/golangci-lint)
 * [nilaway-找出可能panic](https://github.com/uber-go/nilaway)
 * [lo-基于泛型加强基础功能库](https://github.com/samber/lo)
 * [funk-基于泛型加强基础功能库](https://github.com/thoas/go-funk)
+* [jennifer-生成ast库](https://github.com/dave/jennifer)
+* [纯go实现全功能pdf库](https://github.com/pdfcpu/pdfcpu)
 * [btree-google开源](https://github.com/google/btree)
 * [exp-官方扩展库值得一看](https://pkg.go.dev/golang.org/x/exp)
 * [stl4go-golang版的stl](https://github.com/chen3feng/stl4go)
