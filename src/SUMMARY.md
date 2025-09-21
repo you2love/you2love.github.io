@@ -25,13 +25,21 @@
 
 - [golang](golang/golang.md)
 
-  - [grpc](golang/grpc.md)
+  - [ac_machine](golang/ac_machine.md)
+
+  - [ast](golang/ast.md)
+
+  - [bnf](golang/bnf.md)
+
+  - [build](golang/build.md)
 
   - [code](golang/code.md)
 
   - [context](golang/context.md)
 
   - [echo](golang/echo.md)
+
+  - [embed](golang/embed.md)
 
   - [freetype](golang/freetype.md)
 
@@ -41,7 +49,11 @@
 
   - [go-git](golang/go-git.md)
 
+  - [go-tool](golang/go-tool.md)
+
   - [groupby](golang/groupby.md)
+
+  - [grpc](golang/grpc.md)
 
   - [io](golang/io.md)
 

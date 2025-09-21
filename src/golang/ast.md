@@ -1,7 +1,50 @@
 # ast
 <!-- toc --> 
 
-Go 语言的 `ast`（Abstract Syntax Tree，抽象语法树）包是标准库中用于代码分析的核心工具，常用于代码检查、格式化、自动化重构等场景。以下是对 `ast` 包的详细说明和用法指南：
+Go 语言的 `ast`（Abstract Syntax Tree，抽象语法树）包是标准库中用于代码分析的核心工具，常用于代码检查、格式化、自动化重构等场景。
+
+```dot process
+digraph G {
+    N [label="Node"];
+    NF [label="File"];
+    ND [label="Decl"];
+    NS [label="Stmt"];
+    NE [label="Expr"];
+
+    NSF [label="ForStmt"];
+    NSI [label="IfStmt"];
+    NSS [label="SwitchStmt"];
+    NST [label="TypeSwitchStmt"];
+    NSU [label="ReturnStmt"];
+
+    NDB [label="BadDecl"];
+    NDS [label="DeclStmt"];
+    NDF [label="FuncDecl"];
+    NDG [label="GenDecl"];
+
+    NDGI [label="ImportSpec"];
+    NDGV [label="ValueSpec"];
+    NDGT [label="TypeSpec"];
+
+    NEP [label="ParenExpr"];
+    NES [label="SelectorExpr"];
+    NEL [label="SliceExpr"];
+    NET [label="StarExpr"];
+    NEA [label="TypeAssertExpr"];
+    NEI [label="Ident"];
+    NEB [label="BasicLit"];
+    
+    N -> {NF ND NS NE}
+
+    NS -> {NSF NSI NSS NST NSU}
+    
+    ND -> {NDB NDS NDF NDG};
+
+    NE -> {NEP NES NEL NET NEA NEI NEB}
+
+    NDG -> {NDGI NDGV NDGT};
+}
+```
 
 ---
 
@@ -426,6 +469,7 @@ func CheckReturnLocalPointer(node *ast.File) {
 3. **`go/token`**：处理代码位置信息。
 4. **`golang.org/x/tools/go/ast/astutil`**：提供 AST 修改工具。
 5. **`golang.org/x/tools/go/loader`**：加载完整的包信息。
+6. [jennifer-生成ast库](https://github.com/dave/jennifer)
 
 ---
 
