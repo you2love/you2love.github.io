@@ -59,6 +59,8 @@
 
   - [iris](golang/iris.md)
 
+  - [jsontag](golang/jsontag.md)
+
   - [log](golang/log.md)
 
   - [package](golang/package.md)

@@ -470,6 +470,7 @@ func CheckReturnLocalPointer(node *ast.File) {
 4. **`golang.org/x/tools/go/ast/astutil`**：提供 AST 修改工具。
 5. **`golang.org/x/tools/go/loader`**：加载完整的包信息。
 6. [jennifer-生成ast库](https://github.com/dave/jennifer)
+7. **`go/printer`** 把ast的node保存为go源代码文件
 
 ---
 
