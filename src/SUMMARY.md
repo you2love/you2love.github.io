@@ -122,6 +122,7 @@
   - [markdown](fmt/markdown.md)
   - [pdf](fmt/pdf.md)
   - [mermaid](fmt/mermaid.md)
+  - [k8s](fmt/k8s.md)
   - [dot](fmt/dot.md)
   - [dox](fmt/docx.md)
   - [peg](fmt/peg.md)
