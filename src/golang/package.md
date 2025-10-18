@@ -11,6 +11,7 @@
 * [golang-抽象文件系统](https://github.com/spf13/afero)
 * [nilaway-找出可能panic](https://github.com/uber-go/nilaway)
 * [jennifer-生成ast库](https://github.com/dave/jennifer)
+* [goldmark-处理markdown](https://github.com/yuin/goldmark)
 * [enum-常量生成器](https://github.com/abice/go-enum)
 * [纯go实现全功能pdf库](https://github.com/pdfcpu/pdfcpu)
 * [btree-google开源](https://github.com/google/btree)
