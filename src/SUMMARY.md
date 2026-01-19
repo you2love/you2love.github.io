@@ -196,3 +196,9 @@
   - [wasm](other/wasm.md)
   - [阿里云](other/aliyun.md)
   - [腾讯](other/tencent.md)
+
+-----
+
+- [医学](doctor/doctor.md)
+
+  - [常见病](doctor/common_disease.md)
