@@ -77,6 +77,8 @@
 
   - [oom](golang/oom.md)
 
+  - [panic](golang/panic.md)
+
 -----
 
 - [python](python/python.md)
