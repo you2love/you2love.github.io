@@ -143,6 +143,7 @@
 
   - [memcached](db/memcached.md)
   - [redis](db/redis.md)
+  - [redis用途](db/use-redis.md)
   - [mysql](db/mysql.md)
   - [慢sql](db/slow-sql.md)
   - [gql](db/gql.md)
