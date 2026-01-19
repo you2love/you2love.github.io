@@ -144,6 +144,7 @@
   - [memcached](db/memcached.md)
   - [redis](db/redis.md)
   - [mysql](db/mysql.md)
+  - [慢sql](db/slow-sql.md)
   - [gql](db/gql.md)
 
 -----
