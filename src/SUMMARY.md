@@ -73,6 +73,10 @@
 
   - [stringer](golang/stringer.md)
 
+  - [内存泄漏](golang/leak-memory.md)
+
+  - [oom](golang/oom.md)
+
 -----
 
 - [python](python/python.md)
