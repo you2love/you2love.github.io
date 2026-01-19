@@ -219,4 +219,4 @@
 
   - [药品指南](doctor/medicine.md)
 
-  - [体检报告](doctor/check_up.md)
+  - [体检指标](doctor/check_up.md)
