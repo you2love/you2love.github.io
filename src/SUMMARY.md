@@ -212,3 +212,5 @@
   - [常见病](doctor/common_disease.md)
 
   - [八大系统](doctor/system.md)
+
+  - [症状](doctor/symptoms.md)
