@@ -214,3 +214,7 @@
   - [八大系统](doctor/system.md)
 
   - [症状](doctor/symptoms.md)
+
+  - [省钱就医](doctor/medical_care.md)
+
+  - [药品指南](doctor/medicine.md)
