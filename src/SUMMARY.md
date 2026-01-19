@@ -218,3 +218,5 @@
   - [省钱就医](doctor/medical_care.md)
 
   - [药品指南](doctor/medicine.md)
+
+  - [体检报告](doctor/check_up.md)
