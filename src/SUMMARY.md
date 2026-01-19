@@ -81,6 +81,8 @@
 
   - [panic](golang/panic.md)
 
+  - [内置结构](golang/slice-map-channel.md)
+
 -----
 
 - [python](python/python.md)
@@ -167,6 +169,7 @@
   - [git](soft/git.md)
   - [brew](soft/brew.md)
   - [k8s](soft/k8s.md)
+  - [k8s简介](soft/k8s-sample.md)
   - [grpc](soft/grpc.md)
   - [gogs](soft/gogs.md)
   - [shell](soft/shell.md)
