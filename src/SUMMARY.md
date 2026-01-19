@@ -210,3 +210,5 @@
 - [医学](doctor/doctor.md)
 
   - [常见病](doctor/common_disease.md)
+
+  - [八大系统](doctor/system.md)
