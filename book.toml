@@ -1,7 +1,7 @@
 [book]
 authors = ["you2love"]
 language = "zh"
-multilingual = false
+# multilingual = false
 src = "src"
 title = "技术文档"
 description = "记录技术积累"
