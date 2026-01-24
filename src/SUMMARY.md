@@ -5,6 +5,15 @@
 
 -----
 
+- [ai](ai/daily.md)
+
+  - [lstm](ai/lstm.md)
+  - [conv2d](ai/conv2d.md)
+  - [dense](ai/dense.md)
+  - [pool](ai/pool.md)
+
+-----
+
 - [docker](docker/docker.md)
 
   - [python](docker/python.md)
