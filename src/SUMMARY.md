@@ -7,6 +7,8 @@
 
 - [ai](ai/daily.md)
 
+  - [智能体](ai/agent.md)
+  - [skill](ai/skill.md)
   - [lstm](ai/lstm.md)
   - [conv2d](ai/conv2d.md)
   - [dense](ai/dense.md)
