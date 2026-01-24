@@ -9,6 +9,7 @@
 
   - [智能体](ai/agent.md)
   - [skill](ai/skill.md)
+  - [mcp](ai/mcp.md)
   - [lstm](ai/lstm.md)
   - [conv2d](ai/conv2d.md)
   - [dense](ai/dense.md)
